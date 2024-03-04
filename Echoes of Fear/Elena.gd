@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 @export var mouse_sensitivity = 0.002
 var held_item
-
+#gud
 
 const SPEED = 5.0
 const JUMP_VELOCITY = 4.5
