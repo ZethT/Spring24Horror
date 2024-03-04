@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://t6spb3v41lh"]
+
+[ext_resource type="Script" path="res://Elena.gd" id="1_ck4s4"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kb7n7"]
+
+[node name="Elena" type="CharacterBody3D"]
+collision_layer = 2
+collision_mask = 5
+script = ExtResource("1_ck4s4")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_kb7n7")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="RayCast3D" type="RayCast3D" parent="Head"]
+target_position = Vector3(2.08165e-12, 2.08165e-12, -2)
+collision_mask = 13

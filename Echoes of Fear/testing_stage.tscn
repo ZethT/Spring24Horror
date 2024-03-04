@@ -1,0 +1,57 @@
+[gd_scene load_steps=10 format=3 uid="uid://eo8cnm16flln"]
+
+[ext_resource type="PackedScene" uid="uid://t6spb3v41lh" path="res://Elena.tscn" id="1_fhoth"]
+[ext_resource type="PackedScene" uid="uid://bkkuxet7c35lf" path="res://interact_sphere.tscn" id="2_gls4s"]
+[ext_resource type="PackedScene" uid="uid://bhv57d8656rbr" path="res://grabbing_capsule.tscn" id="3_12uk0"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ee7fb"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_pj85k"]
+sky_material = SubResource("ProceduralSkyMaterial_ee7fb")
+
+[sub_resource type="Environment" id="Environment_c8ngi"]
+background_mode = 2
+sky = SubResource("Sky_pj85k")
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_b2wio"]
+size = Vector3(20, 0.5, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_akmdq"]
+albedo_color = Color(0.25098, 0.376471, 0.2, 1)
+metallic_specular = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_cwte6"]
+material = SubResource("StandardMaterial3D_akmdq")
+size = Vector3(20, 0.5, 20)
+
+[node name="Testing Stage" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_c8ngi")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Elena" parent="." instance=ExtResource("1_fhoth")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_b2wio")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_cwte6")
+
+[node name="interact sphere" parent="." instance=ExtResource("2_gls4s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.01512, 1.02082, 2.94248)
+
+[node name="grabbing capsule" parent="." instance=ExtResource("3_12uk0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.870441, 1.29612, 5.73245)

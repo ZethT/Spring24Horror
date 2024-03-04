@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=3 uid="uid://bkkuxet7c35lf"]
+
+[ext_resource type="Script" path="res://interact_sphere.gd" id="1_dh7bb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sa4ip"]
+albedo_color = Color(0.25098, 0.454902, 1, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_436dy"]
+material = SubResource("StandardMaterial3D_sa4ip")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_wwy50"]
+
+[node name="interact sphere" type="StaticBody3D"]
+script = ExtResource("1_dh7bb")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_436dy")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_wwy50")

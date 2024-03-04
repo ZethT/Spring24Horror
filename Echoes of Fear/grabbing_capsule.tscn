@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bhv57d8656rbr"]
+
+[ext_resource type="Script" path="res://grabbing_capsule.gd" id="1_8d7uo"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kb16k"]
+albedo_color = Color(1, 1, 0.313726, 1)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7vf4x"]
+material = SubResource("StandardMaterial3D_kb16k")
+radius = 0.25
+height = 1.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tys3u"]
+radius = 0.25
+height = 1.0
+
+[node name="grabbing capsule" type="StaticBody3D"]
+collision_layer = 8
+collision_mask = 11
+script = ExtResource("1_8d7uo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_7vf4x")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_tys3u")
