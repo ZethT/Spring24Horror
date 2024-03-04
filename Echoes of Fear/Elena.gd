@@ -4,7 +4,7 @@ extends CharacterBody3D
 var held_item
 
 
-const SPEED = 5.0
+const SPEED = 4.0
 const JUMP_VELOCITY = 4.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
