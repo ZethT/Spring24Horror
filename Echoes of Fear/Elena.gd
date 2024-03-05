@@ -43,7 +43,7 @@ func _unhandled_input(event):
 		var object = $Head/RayCast3D.get_collider()
 		if object:
 			if object.has_method("interact"):
-				object.interact()
+				object.interact(held_item)
 			elif held_item:
 				held_item.release(self)
 				held_item = null
