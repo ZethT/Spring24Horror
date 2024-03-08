@@ -1,9 +1,9 @@
 [gd_scene load_steps=13 format=3 uid="uid://eo8cnm16flln"]
 
-[ext_resource type="PackedScene" uid="uid://t6spb3v41lh" path="res://Elena.tscn" id="1_fhoth"]
-[ext_resource type="PackedScene" uid="uid://bkkuxet7c35lf" path="res://interact_sphere.tscn" id="2_gls4s"]
-[ext_resource type="PackedScene" uid="uid://bhv57d8656rbr" path="res://grabbing_capsule.tscn" id="3_12uk0"]
-[ext_resource type="Script" path="res://interact_task.gd" id="4_dqpky"]
+[ext_resource type="PackedScene" uid="uid://t6spb3v41lh" path="res://Elena.tscn" id="1_fcilq"]
+[ext_resource type="PackedScene" uid="uid://bkkuxet7c35lf" path="res://Testing/interact_sphere.tscn" id="2_ivqvb"]
+[ext_resource type="PackedScene" uid="uid://bhv57d8656rbr" path="res://Testing/grabbing_capsule.tscn" id="3_lgat8"]
+[ext_resource type="Script" path="res://Testing/interact_task.gd" id="4_46swy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ee7fb"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -21,12 +21,12 @@ glow_enabled = true
 [sub_resource type="BoxShape3D" id="BoxShape3D_b2wio"]
 size = Vector3(20, 0.5, 20)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_akmdq"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pqumy"]
 albedo_color = Color(0.25098, 0.376471, 0.2, 1)
 metallic_specular = 0.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_cwte6"]
-material = SubResource("StandardMaterial3D_akmdq")
+material = SubResource("StandardMaterial3D_pqumy")
 size = Vector3(20, 0.5, 20)
 
 [sub_resource type="BoxMesh" id="BoxMesh_4rbs8"]
@@ -42,7 +42,7 @@ environment = SubResource("Environment_c8ngi")
 transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Elena" parent="." instance=ExtResource("1_fhoth")]
+[node name="Elena" parent="." instance=ExtResource("1_fcilq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
@@ -55,15 +55,15 @@ shape = SubResource("BoxShape3D_b2wio")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
 mesh = SubResource("BoxMesh_cwte6")
 
-[node name="interact sphere" parent="." instance=ExtResource("2_gls4s")]
+[node name="interact sphere" parent="." instance=ExtResource("2_ivqvb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.01512, 1.02082, 2.94248)
 
-[node name="grabbing capsule" parent="." instance=ExtResource("3_12uk0")]
+[node name="grabbing capsule" parent="." instance=ExtResource("3_lgat8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.870441, 1.29612, 5.73245)
 
 [node name="task interact" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.50102, 1.08024, 4.59541)
-script = ExtResource("4_dqpky")
+script = ExtResource("4_46swy")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="task interact"]
 mesh = SubResource("BoxMesh_4rbs8")

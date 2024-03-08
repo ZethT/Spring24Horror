@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Echoes of Fear"
-run/main_scene="res://testing_stage.tscn"
+run/main_scene="res://Game.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Tasks="*res://tasks.gd"
+Stats="*res://stats.gd"
 
 [display]
 
