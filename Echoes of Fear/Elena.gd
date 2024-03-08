@@ -46,6 +46,7 @@ func _unhandled_input(event):
 			elif object.has_method("grab"):
 				object.grab($Head/Hand)
 				held_item = object
+				print(held_item.get_name())
 		elif held_item:
 			# Release held item if interact is pressed when not looking at an interactable object
 			held_item.release(self)
