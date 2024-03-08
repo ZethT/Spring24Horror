@@ -1,9 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://t6spb3v41lh"]
+[gd_scene load_steps=5 format=3 uid="uid://t6spb3v41lh"]
 
 [ext_resource type="Script" path="res://Elena.gd" id="1_ck4s4"]
 [ext_resource type="Script" path="res://UI.gd" id="2_au1xw"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kb7n7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b0i6m"]
+font_size = 40
+font_color = Color(0.0117647, 0.0588235, 0.196078, 1)
 
 [node name="Elena" type="CharacterBody3D"]
 collision_layer = 2
@@ -27,18 +31,44 @@ collision_mask = 13
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
 script = ExtResource("2_au1xw")
 
 [node name="Task List" type="Control" parent="UI"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 392.0
+offset_top = 53.0
+offset_right = -307.0
+offset_bottom = -45.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ColorRect" type="ColorRect" parent="UI/Task List"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.952941, 1, 0.964706, 1)
 
 [node name="Label" type="Label" parent="UI/Task List"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Testing"
+label_settings = SubResource("LabelSettings_b0i6m")
