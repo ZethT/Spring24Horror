@@ -1,0 +1,36 @@
+[gd_scene load_steps=8 format=3 uid="uid://7j88yobejgrd"]
+
+[ext_resource type="PackedScene" uid="uid://t6spb3v41lh" path="res://Elena.tscn" id="1_ctpqe"]
+[ext_resource type="Script" path="res://Game.gd" id="1_mug4m"]
+[ext_resource type="PackedScene" uid="uid://b5y7ve8rcuiin" path="res://Environments/Home.tscn" id="2_gi724"]
+[ext_resource type="PackedScene" uid="uid://ccu351y3rnhy" path="res://Environments/School.tscn" id="3_8i1aq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_myxdm"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_c40su"]
+sky_material = SubResource("ProceduralSkyMaterial_myxdm")
+
+[sub_resource type="Environment" id="Environment_7vayp"]
+background_mode = 2
+sky = SubResource("Sky_c40su")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="Game" type="Node3D"]
+script = ExtResource("1_mug4m")
+home = ExtResource("2_gi724")
+school = ExtResource("3_8i1aq")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_7vayp")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -0.500003, 0.749999, -0.43301, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Elena" parent="." instance=ExtResource("1_ctpqe")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12068, 0)
+
+[node name="Home" parent="." instance=ExtResource("2_gi724")]

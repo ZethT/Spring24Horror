@@ -1,0 +1,53 @@
+[gd_scene load_steps=7 format=3 uid="uid://b5y7ve8rcuiin"]
+
+[ext_resource type="Script" path="res://Environments/Home.gd" id="1_is6ft"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7s3ny"]
+size = Vector3(20, 0.5, 20)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_akmdq"]
+albedo_color = Color(0.25098, 0.376471, 0.2, 1)
+metallic_specular = 0.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_mhl1a"]
+material = SubResource("StandardMaterial3D_akmdq")
+size = Vector3(20, 0.5, 20)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_prj0a"]
+top_radius = 0.1
+bottom_radius = 0.1
+height = 3.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_6jsmt"]
+radius = 1.0
+
+[node name="Home" type="Node3D"]
+script = ExtResource("1_is6ft")
+
+[node name="Terrain" type="Node3D" parent="."]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
+collision_mask = 15
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/StaticBody3D"]
+shape = SubResource("BoxShape3D_7s3ny")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain/StaticBody3D"]
+mesh = SubResource("BoxMesh_mhl1a")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="Terrain"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.74756, -0.0294372, 6.39174)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain/StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+mesh = SubResource("CylinderMesh_prj0a")
+
+[node name="Area3D" type="Area3D" parent="Terrain/StaticBody3D2"]
+collision_mask = 2
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/StaticBody3D2/Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+shape = SubResource("CylinderShape3D_6jsmt")
+
+[connection signal="body_entered" from="Terrain/StaticBody3D2/Area3D" to="." method="_on_area_3d_body_entered"]
