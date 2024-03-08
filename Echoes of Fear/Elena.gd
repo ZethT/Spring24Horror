@@ -2,9 +2,10 @@ extends CharacterBody3D
 
 @export var mouse_sensitivity = 0.002
 var held_item
-#gud
 
-const SPEED = 5.0
+#hello - endlessette
+
+const SPEED = 4.0
 const JUMP_VELOCITY = 4.5
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -36,13 +37,13 @@ func _physics_process(delta):
 
 	move_and_slide()
 
-
+# Muahahaha
 func _unhandled_input(event):
 	if event.is_action_pressed("interact"):
 		var object = $Head/RayCast3D.get_collider()
 		if object:
 			if object.has_method("interact"):
-				object.interact()
+				object.interact(held_item)
 			elif held_item:
 				held_item.release(self)
 				held_item = null

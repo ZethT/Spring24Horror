@@ -1,5 +1,5 @@
 extends StaticBody3D
 
 
-func interact():
+func interact(held_item):
 	queue_free()
