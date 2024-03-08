@@ -5,12 +5,12 @@
 [sub_resource type="BoxShape3D" id="BoxShape3D_7s3ny"]
 size = Vector3(20, 0.5, 20)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_akmdq"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hcx38"]
 albedo_color = Color(0.25098, 0.376471, 0.2, 1)
 metallic_specular = 0.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_mhl1a"]
-material = SubResource("StandardMaterial3D_akmdq")
+material = SubResource("StandardMaterial3D_hcx38")
 size = Vector3(20, 0.5, 20)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_prj0a"]

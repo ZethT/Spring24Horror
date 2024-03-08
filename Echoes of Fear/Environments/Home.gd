@@ -12,5 +12,5 @@ func _process(delta):
 
 
 func _on_area_3d_body_entered(body):
-	if body.get_name() == "Elena" and Stats.time == 1:
-		Stats.time = 2
+	if body.get_name() == "Elena" and Stats.time == 0:
+		self.get_parent().next_scene()
