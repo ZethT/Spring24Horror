@@ -42,7 +42,7 @@ func _unhandled_input(event):
 		if object:
 			# Grab or interact with the collided object if possible
 			if object.has_method("interact"):
-				object.interact()
+				object.interact(held_item)
 			elif object.has_method("grab"):
 				object.grab($Head/Hand)
 				held_item = object
