@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://bkkuxet7c35lf"]
 
-[ext_resource type="Script" path="res://interact_sphere.gd" id="1_dh7bb"]
+[ext_resource type="Script" path="res://Testing/interact_sphere.gd" id="1_dh7bb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sa4ip"]
 albedo_color = Color(0.25098, 0.454902, 1, 1)
