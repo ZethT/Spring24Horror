@@ -1,16 +1,16 @@
-extends Node3D
+extends StaticBody3D
 
 # Reference to the player character (set this in the script)
-var player: CollisionShape3D
+var player: CharacterBody3D
 var sittingPosition: Vector3
 var originalPosition: Vector3
 
 func _ready():
 	# Assuming you've set up the sitting position
-	sittingPosition = Vector3(0, 1.0, 0)  # Adjust the position as needed
+	sittingPosition = Vector3(-3.5, -0.1, 0.5)  # Adjust the position as needed
 
 	# Find the player node by name (replace "Elena" with the actual name)
-	player = get_node("Elena")
+	player = get_node("/root/Game/Elena")
 	if !player:
 		print("Error: Player node not found. Make sure it has the correct name.")
 
@@ -21,13 +21,15 @@ func interact(held_item):
 		if player:
 			player.transform.origin = sittingPosition
 			player.velocity = Vector3.ZERO  # Stop player movement
-			player.gravity = 0  # Disable gravity temporarily
-			player.mouse_mode = Input.MOUSE_MODE_VISIBLE  # Show cursor
+			player.speed = 0
+			#player.gravity = 0  # Disable gravity temporarily
+			#player.mouse_mode = Input.MOUSE_MODE_VISIBLE  # Show cursor
 	else:
 		# Stand up (optional: play a stand-up animation)
 		if player:
 			player.gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
-			player.mouse_mode = Input.MOUSE_MODE_CAPTURED  # Capture mouse again
+			player.speed = 5
+			#player.mouse_mode = Input.MOUSE_MODE_CAPTURED  # Capture mouse again
 
 func grab(hand):
 	pass
