@@ -73,4 +73,4 @@ mesh = SubResource("BoxMesh_4rbs8")
 shape = SubResource("BoxShape3D_pumun")
 
 [node name="Tablechair" parent="." instance=ExtResource("5_yn0sm")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -4.9994, 0.334508, 2.47246)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0.440576, 0)

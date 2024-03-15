@@ -1,18 +1,17 @@
-extends Spatial
+extends Node3D
 
 # Reference to the player character (set this in the script)
-var player: KinematicBody3D
+var player: CollisionShape3D
 var sittingPosition: Vector3
+var originalPosition: Vector3
 
 func _ready():
 	# Assuming you've set up the sitting position
 	sittingPosition = Vector3(0, 1.0, 0)  # Adjust the position as needed
-		# Find the player node by name (replace "Player" with the actual name)
+
+	# Find the player node by name (replace "Elena" with the actual name)
 	player = get_node("Elena")
-	if player:
-		# Assuming you've set up the sitting position
-		sittingPosition = Vector3(0, 1.0, 0)  # Adjust the position as needed
-	else:
+	if !player:
 		print("Error: Player node not found. Make sure it has the correct name.")
 
 func interact(held_item):
@@ -27,9 +26,10 @@ func interact(held_item):
 	else:
 		# Stand up (optional: play a stand-up animation)
 		if player:
-			player.transform.origin = original_position
 			player.gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 			player.mouse_mode = Input.MOUSE_MODE_CAPTURED  # Capture mouse again
 
 func grab(hand):
-	
+	pass
+	# Called when the player grabs this object (if applicable)
+	# Implement grabbing logic here (e.g., attach to hand bone)
