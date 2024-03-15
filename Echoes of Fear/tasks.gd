@@ -1,23 +1,23 @@
 extends Node
 
 var day_1 = [
-	["pick clothes", "eat", "feed cat"],
-	["take notes", "take test"],
-	["homework", "order cat food", "pick clothes"]]
+	["eat", "feed cat", "pick clothes", "take backpack"],
+	["take notes", "eat"],
+	["homework", "eat", "feed cat", "pick clothes"]]
 var day_2 = [
-	[],
+	["eat", "feed cat", "pick clothes", "take backpack"],
 	[],
 	[]]
 var day_3 = [
-	[],
+	["eat", "feed cat", "pick clothes", "take backpack"],
 	[],
 	[]]
 var day_4 = [
-	[],
+	["eat", "feed cat", "pick clothes", "take backpack"],
 	[],
 	[]]
 var day_5 = [
-	[],
+	["eat", "feed cat", "pick clothes", "take backpack"],
 	[],
 	[]]
 
