@@ -16,4 +16,3 @@ func _process(delta):
 	else:
 		$"Task List".hide()
 	
-	
