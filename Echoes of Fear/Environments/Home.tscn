@@ -1,10 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://b5y7ve8rcuiin"]
+[gd_scene load_steps=9 format=3 uid="uid://b5y7ve8rcuiin"]
 
 [ext_resource type="Script" path="res://Environments/Home.gd" id="1_is6ft"]
 [ext_resource type="PackedScene" uid="uid://bkkuxet7c35lf" path="res://Testing/interact_sphere.tscn" id="2_gldhi"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7s3ny"]
-size = Vector3(20, 0.5, 20)
+size = Vector3(100, 0.5, 100)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hcx38"]
 albedo_color = Color(0.25098, 0.376471, 0.2, 1)
@@ -12,7 +12,7 @@ metallic_specular = 0.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_mhl1a"]
 material = SubResource("StandardMaterial3D_hcx38")
-size = Vector3(20, 0.5, 20)
+size = Vector3(100, 0.5, 100)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_prj0a"]
 top_radius = 0.1
@@ -22,23 +22,26 @@ height = 3.0
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_6jsmt"]
 radius = 1.0
 
+[sub_resource type="BoxMesh" id="BoxMesh_x6e5q"]
+size = Vector3(20, 20, 20)
+
 [node name="Home" type="Node3D"]
 script = ExtResource("1_is6ft")
 
 [node name="Terrain" type="Node3D" parent="."]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Terrain"]
+[node name="ground" type="StaticBody3D" parent="Terrain"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 collision_mask = 15
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/ground"]
 shape = SubResource("BoxShape3D_7s3ny")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain/StaticBody3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain/ground"]
 mesh = SubResource("BoxMesh_mhl1a")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="Terrain"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.74756, -0.0294372, 6.39174)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.7011, 0.205415, 6.07985)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain/StaticBody3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
@@ -52,6 +55,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_6jsmt")
 
 [node name="interact sphere" parent="." instance=ExtResource("2_gldhi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.651551, 4.76837e-07, 5.59812)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.08002, 4.76837e-07, 2.04533)
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.59448, -1.16829, -4.84126)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.28091, 0, -1.68359)
+mesh = SubResource("BoxMesh_x6e5q")
 
 [connection signal="body_entered" from="Terrain/StaticBody3D2/Area3D" to="." method="_on_area_3d_body_entered"]
