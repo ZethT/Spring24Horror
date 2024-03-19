@@ -53,7 +53,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_6jsmt")
 
 [node name="interact sphere" parent="." instance=ExtResource("2_gldhi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.651551, 4.76837e-07, 5.59812)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.17201, 1.0613, 3.37914)
 
 [node name="Tablechair" parent="." instance=ExtResource("3_y8pqn")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3, 0.27, 2.08165e-12)

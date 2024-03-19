@@ -1,5 +1,7 @@
 extends StaticBody3D
 
+const TIME = 2
+
 var locked = false
 # locked must change to true when task is finished
 
