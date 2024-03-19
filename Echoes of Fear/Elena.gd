@@ -5,7 +5,7 @@ var held_item
 var object
 var old_object
 
-const SPEED = 5.0
+var speed = 5.0
 const JUMP_VELOCITY = 4.5
 
 @onready var progress = $UI/Reticle/Progress
@@ -31,8 +31,8 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * speed
+		velocity.z = direction.z * speed
 	else:
 		velocity.x = 0
 		velocity.z = 0

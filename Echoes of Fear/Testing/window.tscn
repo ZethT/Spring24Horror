@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://bbqekfs2ixcj6"]
+
+[ext_resource type="Script" path="res://Node3D.gd" id="1_ft85d"]
+[ext_resource type="PackedScene" uid="uid://cwjqs6hnr7ye0" path="res://window (move).dae" id="2_srtej"]
+[ext_resource type="PackedScene" uid="uid://b02iuhope4gvn" path="res://Window (stay).dae" id="3_5oecq"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_057a5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tkrdq"]
+
+[node name="Window" type="RigidBody3D"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 2.08165e-12, 1, 2.08165e-12)
+script = ExtResource("1_ft85d")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.00668, 0)
+visible = false
+mesh = SubResource("SphereMesh_057a5")
+
+[node name="window (move)" parent="." instance=ExtResource("2_srtej")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+
+[node name="Window (stay)" parent="." instance=ExtResource("3_5oecq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 2.65, 0, 0, 0, 3.4, 0.05, -1.25, 4.16329e-12)
+shape = SubResource("BoxShape3D_tkrdq")
