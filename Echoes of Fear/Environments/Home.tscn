@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://ccgjh3e4iy4b" path="res://tablechair.tscn" id="3_y8pqn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7s3ny"]
-size = Vector3(20, 0.5, 20)
+size = Vector3(100, 0.5, 100)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hcx38"]
 albedo_color = Color(0.25098, 0.376471, 0.2, 1)
@@ -13,7 +13,7 @@ metallic_specular = 0.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_mhl1a"]
 material = SubResource("StandardMaterial3D_hcx38")
-size = Vector3(20, 0.5, 20)
+size = Vector3(100, 0.5, 100)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_prj0a"]
 top_radius = 0.1
@@ -28,18 +28,18 @@ script = ExtResource("1_is6ft")
 
 [node name="Terrain" type="Node3D" parent="."]
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Terrain"]
+[node name="ground" type="StaticBody3D" parent="Terrain"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
 collision_mask = 15
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Terrain/ground"]
 shape = SubResource("BoxShape3D_7s3ny")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain/StaticBody3D"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain/ground"]
 mesh = SubResource("BoxMesh_mhl1a")
 
 [node name="StaticBody3D2" type="StaticBody3D" parent="Terrain"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.74756, -0.0294372, 6.39174)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.7011, 0.205415, 6.07985)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Terrain/StaticBody3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
@@ -53,9 +53,52 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_6jsmt")
 
 [node name="interact sphere" parent="." instance=ExtResource("2_gldhi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.17201, 1.0613, 3.37914)
 
-[node name="Tablechair" parent="." instance=ExtResource("3_y8pqn")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3, 0.27, 2.08165e-12)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.08002, 4.76837e-07, 2.04533)
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(0.559637, 0, 0, 0, 1, 0, 0, 0, 0.557862, -7.52827, 10.1096, -7.26934)
+
+[node name="bigger1" type="CSGBox3D" parent="Node3D"]
+transform = Transform3D(1.00163, 0, 0, 0, 1.00157, 0, 0, 0, 1.00163, 5.90442, -7.34484, -1.55598)
+use_collision = true
+flip_faces = true
+size = Vector3(32.8489, 5.50214, 47.2209)
+
+[node name="frontdoor" type="CSGBox3D" parent="Node3D/bigger1"]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0, 0, 0, 1, 16.657, -1.04294, 14.7907)
+operation = 2
+size = Vector3(1.36659, 3.08472, 2.9624)
+
+[node name="playerbedroom" type="CSGBox3D" parent="Node3D"]
+transform = Transform3D(0.999996, 0, 0, 0, 0.999985, 0, 0, 0, 1, 16.1535, -7.21635, 1.85127)
+use_collision = true
+size = Vector3(12.491, 5.89309, 15.288)
+
+[node name="w1" type="CSGBox3D" parent="Node3D/playerbedroom"]
+transform = Transform3D(1, 0, 0, 0, 0.999985, 0, 0, 0, 1, -0.216801, -0.595362, -1.17916)
+operation = 2
+size = Vector3(11.886, 5.27811, 16.8184)
+
+[node name="doorbed" type="CSGBox3D" parent="Node3D/playerbedroom"]
+transform = Transform3D(1, 0, 0, 0, 0.999995, 0, 0, 0, 1, -5.44554, -1.48036, -4.21863)
+operation = 2
+size = Vector3(1.36659, 3.08472, 2.9624)
+
+[node name="wall2" type="CSGBox3D" parent="Node3D"]
+transform = Transform3D(0.999996, 0, 0, 0, 0.999993, 0, 0, 0, 1, -2.80324, -7.15648, -10.0404)
+use_collision = true
+size = Vector3(16.156, 6.37585, 39.5585)
+
+[node name="wall1" type="CSGBox3D" parent="Node3D"]
+transform = Transform3D(0.999996, 0, 0, 0, 0.999998, 0, 0, 0, 1, 7.3226, -7.1453, -18.3906)
+use_collision = true
+size = Vector3(30, 6.35266, 25)
+
+[node name="doorbed" type="CSGBox3D" parent="Node3D/wall1"]
+transform = Transform3D(-0.0146253, 0, 0.999892, 0, 0.999995, 0, -0.999893, 0, -0.0146253, 0.279817, -1.39596, 11.8659)
+operation = 2
+size = Vector3(1.36659, 3.08472, 2.9624)
+
 
 [connection signal="body_entered" from="Terrain/StaticBody3D2/Area3D" to="." method="_on_area_3d_body_entered"]
