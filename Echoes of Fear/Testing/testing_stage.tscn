@@ -1,9 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://eo8cnm16flln"]
+[gd_scene load_steps=14 format=3 uid="uid://eo8cnm16flln"]
 
 [ext_resource type="PackedScene" uid="uid://t6spb3v41lh" path="res://Elena.tscn" id="1_fcilq"]
 [ext_resource type="PackedScene" uid="uid://bkkuxet7c35lf" path="res://Testing/interact_sphere.tscn" id="2_ivqvb"]
 [ext_resource type="PackedScene" uid="uid://bhv57d8656rbr" path="res://Testing/grabbing_capsule.tscn" id="3_lgat8"]
 [ext_resource type="Script" path="res://Testing/interact_task.gd" id="4_46swy"]
+[ext_resource type="PackedScene" uid="uid://ccgjh3e4iy4b" path="res://tablechair.tscn" id="5_yn0sm"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ee7fb"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -43,7 +44,7 @@ transform = Transform3D(-0.866023, -0.433016, 0.250001, 0, 0.499998, 0.866027, -
 shadow_enabled = true
 
 [node name="Elena" parent="." instance=ExtResource("1_fcilq")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+transform = Transform3D(-0.921552, 0, -0.388255, 0, 1, 0, 0.388255, 0, -0.921552, 0, 1, 0)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
@@ -70,3 +71,6 @@ mesh = SubResource("BoxMesh_4rbs8")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="task interact"]
 shape = SubResource("BoxShape3D_pumun")
+
+[node name="Tablechair" parent="." instance=ExtResource("5_yn0sm")]
+transform = Transform3D(0.5, -1.74393e-16, 1.74393e-16, 1.74393e-16, 0.5, -1.74393e-16, -1.74393e-16, 1.74393e-16, 0.5, -3, 0.286, 2.08165e-12)

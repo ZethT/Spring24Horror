@@ -2,9 +2,13 @@ extends CharacterBody3D
 
 @export var mouse_sensitivity = 0.002
 var held_item
+var object
+var old_object
 
-const SPEED = 5.0
+var speed = 5.0
 const JUMP_VELOCITY = 4.5
+
+@onready var progress = $UI/Reticle/Progress
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
@@ -27,31 +31,46 @@ func _physics_process(delta):
 	var input_dir = Input.get_vector("left", "right", "forward", "backward")
 	var direction = (transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+		velocity.x = direction.x * speed
+		velocity.z = direction.z * speed
 	else:
 		velocity.x = 0
 		velocity.z = 0
 
+	if Input.is_action_pressed("interact"):
+		check_interaction(delta)
+	else:
+		progress.value = 0
+		progress.hide()
+
 	move_and_slide()
 
-func _unhandled_input(event):
-	if event.is_action_pressed("interact"):
-		# Check RayCast3D collision to see if the object player is looking at is interactable
-		var object = $Head/RayCast3D.get_collider()
-		if object:
-			# Grab or interact with the collided object if possible
-			if object.has_method("interact"):
+
+func check_interaction(delta):
+	# Check RayCast3D collision to see if the object player is looking at is interactable
+	object = $Head/RayCast3D.get_collider()
+	if object:
+		# Grab or interact with the collided object if possible
+		if object.has_method("interact"):
+			if progress.value < 100:
+				progress.show()
+				progress.value += object.TIME
+			else:
 				object.interact(held_item)
-			elif object.has_method("grab"):
-				object.grab($Head/Hand)
-				held_item = object
-				print(held_item.get_name())
-		elif held_item:
-			# Release held item if interact is pressed when not looking at an interactable object
-			held_item.release(self)
-			held_item = null
-	
+				progress.value = 0
+				progress.hide()
+		elif object.has_method("grab"):
+			object.grab($Head/Hand)
+			held_item = object
+			print(held_item.get_name())
+		else:
+			progress.value = 0
+			progress.hide()
+	else:
+		progress.value = 0
+		progress.hide()
+
+func _unhandled_input(event):
 	# Frees the cursor when escape is pressed
 	if event.is_action_pressed("ui_cancel"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
