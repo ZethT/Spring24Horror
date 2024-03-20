@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://b5y7ve8rcuiin"]
+[gd_scene load_steps=9 format=3 uid="uid://b5y7ve8rcuiin"]
 
 [ext_resource type="Script" path="res://Environments/Home.gd" id="1_is6ft"]
 [ext_resource type="PackedScene" uid="uid://bkkuxet7c35lf" path="res://Testing/interact_sphere.tscn" id="2_gldhi"]
+[ext_resource type="PackedScene" uid="uid://ccgjh3e4iy4b" path="res://tablechair.tscn" id="3_y8pqn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7s3ny"]
 size = Vector3(20, 0.5, 20)
@@ -52,6 +53,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_6jsmt")
 
 [node name="interact sphere" parent="." instance=ExtResource("2_gldhi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.651551, 4.76837e-07, 5.59812)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.17201, 1.0613, 3.37914)
+
+[node name="Tablechair" parent="." instance=ExtResource("3_y8pqn")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -3, 0.27, 2.08165e-12)
 
 [connection signal="body_entered" from="Terrain/StaticBody3D2/Area3D" to="." method="_on_area_3d_body_entered"]
