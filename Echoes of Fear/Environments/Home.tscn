@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b5y7ve8rcuiin"]
+[gd_scene load_steps=8 format=3 uid="uid://b5y7ve8rcuiin"]
 
 [ext_resource type="Script" path="res://Environments/Home.gd" id="1_is6ft"]
 [ext_resource type="PackedScene" uid="uid://bkkuxet7c35lf" path="res://Testing/interact_sphere.tscn" id="2_gldhi"]
@@ -21,9 +21,6 @@ height = 3.0
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_6jsmt"]
 radius = 1.0
-
-[sub_resource type="BoxMesh" id="BoxMesh_x6e5q"]
-size = Vector3(20, 20, 20)
 
 [node name="Home" type="Node3D"]
 script = ExtResource("1_is6ft")
@@ -58,10 +55,47 @@ shape = SubResource("CylinderShape3D_6jsmt")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.08002, 4.76837e-07, 2.04533)
 
 [node name="Node3D" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.59448, -1.16829, -4.84126)
+transform = Transform3D(0.559637, 0, 0, 0, 1, 0, 0, 0, 0.557862, -7.52827, 10.1096, -7.26934)
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.28091, 0, -1.68359)
-mesh = SubResource("BoxMesh_x6e5q")
+[node name="bigger1" type="CSGBox3D" parent="Node3D"]
+transform = Transform3D(1.00163, 0, 0, 0, 1.00157, 0, 0, 0, 1.00163, 5.90442, -7.34484, -1.55598)
+use_collision = true
+flip_faces = true
+size = Vector3(32.8489, 5.50214, 47.2209)
+
+[node name="frontdoor" type="CSGBox3D" parent="Node3D/bigger1"]
+transform = Transform3D(1, 0, 0, 0, 0.999996, 0, 0, 0, 1, 16.657, -1.04294, 14.7907)
+operation = 2
+size = Vector3(1.36659, 3.08472, 2.9624)
+
+[node name="playerbedroom" type="CSGBox3D" parent="Node3D"]
+transform = Transform3D(0.999996, 0, 0, 0, 0.999985, 0, 0, 0, 1, 16.1535, -7.21635, 1.85127)
+use_collision = true
+size = Vector3(12.491, 5.89309, 15.288)
+
+[node name="w1" type="CSGBox3D" parent="Node3D/playerbedroom"]
+transform = Transform3D(1, 0, 0, 0, 0.999985, 0, 0, 0, 1, -0.216801, -0.595362, -1.17916)
+operation = 2
+size = Vector3(11.886, 5.27811, 16.8184)
+
+[node name="doorbed" type="CSGBox3D" parent="Node3D/playerbedroom"]
+transform = Transform3D(1, 0, 0, 0, 0.999995, 0, 0, 0, 1, -5.44554, -1.48036, -4.21863)
+operation = 2
+size = Vector3(1.36659, 3.08472, 2.9624)
+
+[node name="wall2" type="CSGBox3D" parent="Node3D"]
+transform = Transform3D(0.999996, 0, 0, 0, 0.999993, 0, 0, 0, 1, -2.80324, -7.15648, -10.0404)
+use_collision = true
+size = Vector3(16.156, 6.37585, 39.5585)
+
+[node name="wall1" type="CSGBox3D" parent="Node3D"]
+transform = Transform3D(0.999996, 0, 0, 0, 0.999998, 0, 0, 0, 1, 7.3226, -7.1453, -18.3906)
+use_collision = true
+size = Vector3(30, 6.35266, 25)
+
+[node name="doorbed" type="CSGBox3D" parent="Node3D/wall1"]
+transform = Transform3D(-0.0146253, 0, 0.999892, 0, 0.999995, 0, -0.999893, 0, -0.0146253, 0.279817, -1.39596, 11.8659)
+operation = 2
+size = Vector3(1.36659, 3.08472, 2.9624)
 
 [connection signal="body_entered" from="Terrain/StaticBody3D2/Area3D" to="." method="_on_area_3d_body_entered"]
