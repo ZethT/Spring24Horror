@@ -5,6 +5,8 @@ var player: CharacterBody3D
 var sittingPosition: Vector3
 var originalPosition: Vector3
 
+const TIME = 100
+
 func _ready():
 	# Assuming you've set up the sitting position
 	sittingPosition = Vector3(-3.5, -0.1, 0.5)  # Adjust the position as needed
