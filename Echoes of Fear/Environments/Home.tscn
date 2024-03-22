@@ -1,18 +1,17 @@
-[gd_scene load_steps=9 format=3 uid="uid://b5y7ve8rcuiin"]
+[gd_scene load_steps=8 format=3 uid="uid://b5y7ve8rcuiin"]
 
 [ext_resource type="Script" path="res://Environments/Home.gd" id="1_is6ft"]
 [ext_resource type="PackedScene" uid="uid://bkkuxet7c35lf" path="res://Testing/interact_sphere.tscn" id="2_gldhi"]
-[ext_resource type="PackedScene" uid="uid://ccgjh3e4iy4b" path="res://tablechair.tscn" id="3_y8pqn"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7s3ny"]
 size = Vector3(100, 0.5, 100)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hcx38"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_p1hrx"]
 albedo_color = Color(0.25098, 0.376471, 0.2, 1)
 metallic_specular = 0.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_mhl1a"]
-material = SubResource("StandardMaterial3D_hcx38")
+material = SubResource("StandardMaterial3D_p1hrx")
 size = Vector3(100, 0.5, 100)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_prj0a"]
@@ -53,7 +52,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_6jsmt")
 
 [node name="interact sphere" parent="." instance=ExtResource("2_gldhi")]
-
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.08002, 4.76837e-07, 2.04533)
 
 [node name="Node3D" type="Node3D" parent="."]
@@ -81,7 +79,7 @@ operation = 2
 size = Vector3(11.886, 5.27811, 16.8184)
 
 [node name="doorbed" type="CSGBox3D" parent="Node3D/playerbedroom"]
-transform = Transform3D(1, 0, 0, 0, 0.999995, 0, 0, 0, 1, -5.44554, -1.48036, -4.21863)
+transform = Transform3D(1, 0, 0, 0, 0.999995, 0, 0, 0, 1, -5.91319, -1.49526, -4.18475)
 operation = 2
 size = Vector3(1.36659, 3.08472, 2.9624)
 
@@ -99,6 +97,5 @@ size = Vector3(30, 6.35266, 25)
 transform = Transform3D(-0.0146253, 0, 0.999892, 0, 0.999995, 0, -0.999893, 0, -0.0146253, 0.279817, -1.39596, 11.8659)
 operation = 2
 size = Vector3(1.36659, 3.08472, 2.9624)
-
 
 [connection signal="body_entered" from="Terrain/StaticBody3D2/Area3D" to="." method="_on_area_3d_body_entered"]
