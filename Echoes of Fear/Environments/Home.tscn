@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Environments/Home.gd" id="1_is6ft"]
 [ext_resource type="PackedScene" uid="uid://bkkuxet7c35lf" path="res://Testing/interact_sphere.tscn" id="2_gldhi"]
-[ext_resource type="PackedScene" uid="uid://ccgjh3e4iy4b" path="res://tablechair.tscn" id="3_y8pqn"]
+[ext_resource type="PackedScene" uid="uid://ccgjh3e4iy4b" path="res://tablechair.tscn" id="3_uyhe6"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7s3ny"]
 size = Vector3(100, 0.5, 100)
@@ -53,35 +53,34 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_6jsmt")
 
 [node name="interact sphere" parent="." instance=ExtResource("2_gldhi")]
-
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.08002, 4.76837e-07, 2.04533)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.810054, 1.21664, -2.43628)
 
 [node name="Node3D" type="Node3D" parent="."]
 transform = Transform3D(0.559637, 0, 0, 0, 1, 0, 0, 0, 0.557862, -7.52827, 10.1096, -7.26934)
 
 [node name="bigger1" type="CSGBox3D" parent="Node3D"]
-transform = Transform3D(1.00163, 0, 0, 0, 1.00157, 0, 0, 0, 1.00163, 5.90442, -7.34484, -1.55598)
+transform = Transform3D(1.00163, 0, 0, 0, 1.00157, 0, 0, 0, 1.00163, 5.89546, -7.34484, -1.56026)
 use_collision = true
 flip_faces = true
 size = Vector3(32.8489, 5.50214, 47.2209)
 
 [node name="frontdoor" type="CSGBox3D" parent="Node3D/bigger1"]
-transform = Transform3D(1, 0, 0, 0, 0.999996, 0, 0, 0, 1, 16.657, -1.04294, 14.7907)
+transform = Transform3D(1, 0, 0, 0, 0.999986, 0, 0, 0, 1, 16.6642, -0.869761, 15.0696)
 operation = 2
-size = Vector3(1.36659, 3.08472, 2.9624)
+size = Vector3(1.36659, 3.77381, 3.62329)
 
 [node name="playerbedroom" type="CSGBox3D" parent="Node3D"]
-transform = Transform3D(0.999996, 0, 0, 0, 0.999985, 0, 0, 0, 1, 16.1535, -7.21635, 1.85127)
+transform = Transform3D(0.999996, 0, 0, 0, 0.999985, 0, 0, 0, 1, 16.2365, -7.21635, 1.85127)
 use_collision = true
-size = Vector3(12.491, 5.89309, 15.288)
+size = Vector3(12.3251, 5.89309, 15.288)
 
 [node name="w1" type="CSGBox3D" parent="Node3D/playerbedroom"]
-transform = Transform3D(1, 0, 0, 0, 0.999985, 0, 0, 0, 1, -0.216801, -0.595362, -1.17916)
+transform = Transform3D(1, 0, 0, 0, 0.999985, 0, 0, 0, 1, 0.0426393, -0.686915, -1.02709)
 operation = 2
 size = Vector3(11.886, 5.27811, 16.8184)
 
 [node name="doorbed" type="CSGBox3D" parent="Node3D/playerbedroom"]
-transform = Transform3D(1, 0, 0, 0, 0.999995, 0, 0, 0, 1, -5.44554, -1.48036, -4.21863)
+transform = Transform3D(1, 0, 0, 0, 0.999998, 0, 0, 0, 1, -5.63393, -1.48368, -4.2144)
 operation = 2
 size = Vector3(1.36659, 3.08472, 2.9624)
 
@@ -96,9 +95,16 @@ use_collision = true
 size = Vector3(30, 6.35266, 25)
 
 [node name="doorbed" type="CSGBox3D" parent="Node3D/wall1"]
-transform = Transform3D(-0.0146253, 0, 0.999892, 0, 0.999995, 0, -0.999893, 0, -0.0146253, 0.279817, -1.39596, 11.8659)
+transform = Transform3D(-0.0146253, 0, 0.999892, 0, 0.999995, 0, -0.999893, 0, -0.0146253, 0.267141, -1.4988, 10.9992)
 operation = 2
-size = Vector3(1.36659, 3.08472, 2.9624)
+size = Vector3(3.16489, 3.29041, 2.9624)
 
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93525, 2.70821, -7.10025)
+omni_range = 500.0
+omni_attenuation = 0.267943
+
+[node name="Tablechair" parent="." instance=ExtResource("3_uyhe6")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.07543, 0.120732, -4.53889)
 
 [connection signal="body_entered" from="Terrain/StaticBody3D2/Area3D" to="." method="_on_area_3d_body_entered"]
