@@ -13,7 +13,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	pass
+	get_tree().call_group("cat", "update_target_location", $Elena.global_transform.origin)
 
 func next_scene():
 	print("check!")
