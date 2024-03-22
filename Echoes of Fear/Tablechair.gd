@@ -1,4 +1,4 @@
-extends StaticBody3D
+extends RigidBody3D
 
 # Reference to the player character (set this in the script)
 var player: CharacterBody3D
