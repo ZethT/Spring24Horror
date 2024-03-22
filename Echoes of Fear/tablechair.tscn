@@ -1,20 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://c0iko6osqt8nl"]
+[gd_scene load_steps=4 format=3 uid="uid://ccgjh3e4iy4b"]
 
 [ext_resource type="Script" path="res://Tablechair.gd" id="1_wxxti"]
 [ext_resource type="PackedScene" uid="uid://b4qc7trhoxwms" path="res://Table Chair.dae" id="2_0t8kp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v2jpk"]
-size = Vector3(4.3208, 3.72223, 2.82153)
+size = Vector3(4.3208, 1.45069, 3.01697)
 
-[node name="Tablechair" type="RigidBody3D"]
+[node name="Tablechair" type="StaticBody3D"]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+collision_layer = 8
 script = ExtResource("1_wxxti")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60532, 1.36111, 1.01554)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60532, 2.20139, 1.21519)
 shape = SubResource("BoxShape3D_v2jpk")
 
 [node name="Table Chair" parent="." instance=ExtResource("2_0t8kp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.662207, 0, 1.21976)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79648, 2.00607, 0)
