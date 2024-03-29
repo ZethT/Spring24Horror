@@ -16,7 +16,7 @@ height = 1.0
 radius = 0.25
 height = 1.0
 
-[node name="Ghost" type="CharacterBody3D" groups=["cat"]]
+[node name="Ghost" type="CharacterBody3D"]
 collision_layer = 4
 script = ExtResource("1_12wvp")
 
@@ -30,3 +30,8 @@ shape = SubResource("CapsuleShape3D_dmkfm")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 debug_enabled = true
+
+[node name="follow" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="follow" to="." method="_on_follow_timeout"]

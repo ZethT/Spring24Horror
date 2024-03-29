@@ -11,10 +11,6 @@ func _ready():
 	add_child(current_scene)
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	get_tree().call_group("cat", "update_target_location", $Elena.global_transform.origin)
-
 func next_scene():
 	print("check!")
 	Stats.time += 1

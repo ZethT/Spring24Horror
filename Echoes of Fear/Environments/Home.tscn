@@ -121,6 +121,6 @@ omni_range = 500.0
 omni_attenuation = 0.267943
 
 [node name="Ghost" parent="." instance=ExtResource("4_eqi3g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.2895, 0.294742, -6.06033)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34978, 1.14433, 0.33939)
 
 [connection signal="body_entered" from="Terrain/Bus Stop/Area3D" to="." method="_on_area_3d_body_entered"]
