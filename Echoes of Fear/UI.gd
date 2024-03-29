@@ -8,8 +8,11 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	$"Task List/Label".text = str(Tasks.tasks[Stats.day][Stats.time])
+	# Pull up task list when player holds tab
 	if Input.is_action_pressed("check tasks"):
+		# Refresh task list as long as tab is held
+		$"Task List/Label".text = str(Tasks.tasks[Stats.day][Stats.time])
 		$"Task List".show()
 	else:
 		$"Task List".hide()
+	
