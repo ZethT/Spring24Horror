@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwhnxdadktxvo"]
+
+[ext_resource type="Script" path="res://NPCs/Ghost.gd" id="1_12wvp"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_072cv"]
+albedo_color = Color(0, 0, 0, 1)
+metallic = 0.5
+metallic_specular = 0.8
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_7vt4q"]
+material = SubResource("StandardMaterial3D_072cv")
+radius = 0.25
+height = 1.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_dmkfm"]
+radius = 0.25
+height = 1.0
+
+[node name="Ghost" type="CharacterBody3D"]
+collision_layer = 4
+script = ExtResource("1_12wvp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+mesh = SubResource("CapsuleMesh_7vt4q")
+
+[node name="MeshInstance3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_dmkfm")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+debug_enabled = true
+
+[node name="follow" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="follow" to="." method="_on_follow_timeout"]

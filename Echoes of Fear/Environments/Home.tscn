@@ -1,8 +1,16 @@
-[gd_scene load_steps=9 format=3 uid="uid://b5y7ve8rcuiin"]
+[gd_scene load_steps=11 format=3 uid="uid://b5y7ve8rcuiin"]
 
 [ext_resource type="Script" path="res://Environments/Home.gd" id="1_is6ft"]
 [ext_resource type="PackedScene" uid="uid://bkkuxet7c35lf" path="res://Testing/interact_sphere.tscn" id="2_gldhi"]
 [ext_resource type="PackedScene" uid="uid://ccgjh3e4iy4b" path="res://tablechair.tscn" id="3_uyhe6"]
+[ext_resource type="PackedScene" uid="uid://cwhnxdadktxvo" path="res://NPCs/Ghost.tscn" id="4_eqi3g"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_63e3b"]
+vertices = PackedVector3Array(-14.16, 0.1, -24.52, -10.52, 0.1, -25.08, -10.8, 0.1, -49.44, -14.44, 0.1, -22.56, -14.16, 0.1, -24.52, -10.8, 0.1, -49.44, -49.44, 0.1, -49.44, -49.44, 0.1, -22.84, -10.52, 0.1, -25.08, 3.76, 0.1, -25.08, 4.04, 0.1, -49.44, -10.8, 0.1, -49.44, 4.04, 0.1, -49.44, 3.76, 0.1, -25.08, 5.44, 0.1, -25.08, 4.04, 0.1, -49.44, 5.44, 0.1, -25.08, 5.72, 0.1, -24.52, 49.4, 0.1, -24.52, 49.4, 0.1, -49.44, 5.72, 0.1, 0.400002, 4.88, 0.1, 0.68, 4.88, 0.1, 1.24, 5.72, 0.1, 1.52, 49.4, 0.1, 5.16, 49.4, 0.1, -24.52, 5.72, 0.1, -24.52, 5.72, 0.1, 0.400002, 49.4, 0.1, 5.16, 5.72, 0.1, 1.52, 5.72, 0.1, 5.16, 49.4, 0.1, 5.16, 4.6, 6.2, -23.96, -11.36, 6.2, -23.96, -11.64, 6.2, -23.4, -13.04, 6.2, 4.6, 4.6, 6.2, 4.6, -11.64, 6.2, -23.4, -13.32, 6.2, -23.4, -13.04, 6.2, 4.6, -3.8, 0.1, -23.68, -3.8, 0.1, -22, 4.32, 0.1, -22, 4.32, 0.1, -23.68, -13.04, 0.1, -23.12, -13.04, 0.1, -22, -12.48, 0.1, -22, -12.48, 0.1, -23.12, -11.08, 0.1, -23.12, -11.08, 0.1, -22, -5.2, 0.1, -22, -5.2, 0.1, -23.12, -49.44, 0.1, 6, -34.6, 0.1, 6, -34.32, 0.1, 5.16, -49.44, 0.1, -22.84, -33.2, 0.1, 5.16, -32.92, 0.1, 5.72, -14.16, 0.1, 5.16, -33.2, 0.1, 5.16, -14.16, 0.1, 5.16, -14.44, 0.1, -22.56, -49.44, 0.1, -22.84, -49.44, 0.1, -22.84, -34.32, 0.1, 5.16, -33.2, 0.1, 5.16, -11.08, 0.1, -19.48, -11.08, 0.1, -11.36, -5.2, 0.1, -11.36, -5.2, 0.1, -19.48, -2.12, 0.1, -13.04, -1.84, 0.1, -11.36, 3.76, 0.1, -11.36, -3.8, 0.1, -19.48, -3.8, 0.1, -13.04, -2.12, 0.1, -13.04, -2.12, 0.1, -13.04, 3.76, 0.1, -11.36, 3.76, 0.1, -19.48, -3.8, 0.1, -19.48, -1, 0.1, -2.68, 2.08, 0.1, -2.68, 1.52, 0.1, -3.24, -1, 0.1, -2.68, 1.52, 0.1, -3.24, 1.52, 0.1, -4.64, -1.28, 0.1, -8.56, -1, 0.1, -9.96, -1.28, 0.1, -8.84, -1.28, 0.1, -8.56, 1.52, 0.1, -4.64, 3.76, 0.1, -5.48, 3.76, 0.1, -9.96, -3.8, 0.1, -3.24, -2.68, 0.1, -3.52, -2.68, 0.1, -8.28, -3.52, 0.1, -11.64, -1.28, 0.1, -8.56, -1.28, 0.1, -8.84, -2.4, 0.1, -8.84, -2.68, 0.1, -8.28, -2.4, 0.1, -8.84, -3.52, 0.1, -11.64, -2.68, 0.1, -8.28, -12.48, 0.1, -2.4, -5.2, 0.1, -2.4, -5.2, 0.1, -9.96, -12.48, 0.1, -10.24, 3.76, 0.1, 1.52, 4.88, 0.1, 1.24, 4.88, 0.1, 0.68, 3.76, 0.1, 0.400002, 3.76, 0.1, 4.04, 3.76, 0.1, 1.52, -2.4, 0.1, -1.28, -4.08, 0.1, -1, -2.4, 0.1, -1.28, -2.68, 0.1, -3.52, -3.8, 0.1, -3.24, -4.08, 0.1, -1, -4.08, 0.1, -1, -12.48, 0.1, -1, -12.48, 0.1, 4.04, 3.76, 0.1, 4.04, 3.76, 0.1, 0.400002, 3.76, 0.1, -1.28, -2.4, 0.1, -1.28, 3.76, 0.1, 1.52, 3.76, 0.1, 0.400002, -2.4, 0.1, -1.28, -34.32, 0.1, 6.84, -34.6, 0.1, 6, -49.44, 0.1, 6, -49.44, 0.1, 49.4, -13.88, 0.1, 5.72, -14.16, 0.1, 5.16, -32.92, 0.1, 5.72, -33.2, 0.1, 6.84, -33.2, 0.1, 6.84, -34.32, 0.1, 6.84, -49.44, 0.1, 49.4, -11.64, 0.1, 5.72, -13.88, 0.1, 5.72, -33.2, 0.1, 6.84, -49.44, 0.1, 49.4, -11.64, 0.1, 49.4, 5.44, 0.1, 5.72, 3.2, 0.1, 5.72, 3.2, 0.1, 49.4, 49.4, 0.1, 5.16, 5.72, 0.1, 5.16, 5.44, 0.1, 5.72, 3.2, 0.1, 49.4, 49.4, 0.1, 49.4, -11.64, 0.1, 49.4, 3.2, 0.1, 49.4, 3.2, 0.1, 5.72, -11.64, 0.1, 5.72)
+polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 5), PackedInt32Array(5, 3, 7), PackedInt32Array(5, 7, 6), PackedInt32Array(8, 11, 9), PackedInt32Array(9, 11, 10), PackedInt32Array(14, 13, 12), PackedInt32Array(16, 15, 17), PackedInt32Array(17, 15, 18), PackedInt32Array(18, 15, 19), PackedInt32Array(21, 20, 22), PackedInt32Array(22, 20, 23), PackedInt32Array(23, 20, 24), PackedInt32Array(26, 25, 27), PackedInt32Array(27, 25, 28), PackedInt32Array(31, 30, 29), PackedInt32Array(33, 32, 34), PackedInt32Array(34, 32, 36), PackedInt32Array(34, 36, 35), PackedInt32Array(39, 38, 37), PackedInt32Array(43, 42, 40), PackedInt32Array(40, 42, 41), PackedInt32Array(47, 46, 44), PackedInt32Array(44, 46, 45), PackedInt32Array(51, 50, 48), PackedInt32Array(48, 50, 49), PackedInt32Array(53, 52, 54), PackedInt32Array(54, 52, 55), PackedInt32Array(58, 57, 56), PackedInt32Array(60, 59, 61), PackedInt32Array(61, 59, 62), PackedInt32Array(65, 64, 63), PackedInt32Array(69, 68, 66), PackedInt32Array(66, 68, 67), PackedInt32Array(72, 71, 70), PackedInt32Array(75, 74, 73), PackedInt32Array(79, 78, 76), PackedInt32Array(76, 78, 77), PackedInt32Array(82, 81, 80), PackedInt32Array(84, 83, 85), PackedInt32Array(85, 83, 86), PackedInt32Array(88, 87, 89), PackedInt32Array(89, 87, 92), PackedInt32Array(89, 92, 91), PackedInt32Array(89, 91, 90), PackedInt32Array(94, 93, 95), PackedInt32Array(95, 93, 96), PackedInt32Array(98, 97, 99), PackedInt32Array(99, 97, 100), PackedInt32Array(103, 102, 101), PackedInt32Array(105, 104, 106), PackedInt32Array(106, 104, 107), PackedInt32Array(109, 108, 110), PackedInt32Array(110, 108, 111), PackedInt32Array(114, 113, 115), PackedInt32Array(115, 113, 112), PackedInt32Array(117, 116, 118), PackedInt32Array(118, 116, 119), PackedInt32Array(121, 120, 122), PackedInt32Array(122, 120, 123), PackedInt32Array(126, 125, 124), PackedInt32Array(129, 128, 127), PackedInt32Array(131, 130, 132), PackedInt32Array(132, 130, 133), PackedInt32Array(135, 134, 136), PackedInt32Array(136, 134, 137), PackedInt32Array(140, 139, 138), PackedInt32Array(142, 141, 143), PackedInt32Array(143, 141, 145), PackedInt32Array(143, 145, 144), PackedInt32Array(148, 147, 146), PackedInt32Array(150, 149, 151), PackedInt32Array(151, 149, 153), PackedInt32Array(151, 153, 152), PackedInt32Array(157, 156, 154), PackedInt32Array(154, 156, 155)]
+cell_size = 0.28
+cell_height = 0.05
+agent_max_climb = 0.05
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7s3ny"]
 size = Vector3(100, 0.5, 100)
@@ -26,7 +34,8 @@ radius = 1.0
 [node name="Home" type="Node3D"]
 script = ExtResource("1_is6ft")
 
-[node name="Terrain" type="Node3D" parent="."]
+[node name="Terrain" type="NavigationRegion3D" parent="."]
+navigation_mesh = SubResource("NavigationMesh_63e3b")
 
 [node name="ground" type="StaticBody3D" parent="Terrain"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
@@ -52,59 +61,66 @@ collision_mask = 2
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 shape = SubResource("CylinderShape3D_6jsmt")
 
-[node name="interact sphere" parent="." instance=ExtResource("2_gldhi")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.810054, 1.43654, -2.7047)
-
-[node name="Node3D" type="Node3D" parent="."]
+[node name="House" type="Node3D" parent="Terrain"]
 transform = Transform3D(0.559637, 0, 0, 0, 1, 0, 0, 0, 0.557862, -7.52827, 10.1096, -7.26934)
 
-[node name="bigger1" type="CSGBox3D" parent="Node3D"]
-transform = Transform3D(1.00163, 0, 0, 0, 1.00157, 0, 0, 0, 1.00163, 5.89546, -7.34484, -1.56026)
+[node name="bigger1" type="CSGBox3D" parent="Terrain/House"]
+transform = Transform3D(1.00163, 0, 0, 0, 1.00157, 0, 0, 0, 1.00163, 5.89546, -7.04559, -1.56026)
 use_collision = true
-flip_faces = true
-size = Vector3(32.8489, 5.50214, 47.2209)
+size = Vector3(32.8489, 6.0997, 47.2209)
 
-[node name="frontdoor" type="CSGBox3D" parent="Node3D/bigger1"]
-transform = Transform3D(1, 0, 0, 0, 0.999986, 0, 0, 0, 1, 16.6642, -0.869761, 15.0696)
+[node name="frontdoor" type="CSGBox3D" parent="Terrain/House/bigger1"]
+transform = Transform3D(1, 0, 0, 0, 0.99997, 0, 0, 0, 1, 16.3272, -1.36593, 16.3965)
 operation = 2
-size = Vector3(1.36659, 3.77381, 3.62329)
+size = Vector3(3.71015, 3.32685, 3.62329)
 
-[node name="playerbedroom" type="CSGBox3D" parent="Node3D"]
+[node name="CSGBox3D" type="CSGBox3D" parent="Terrain/House/bigger1"]
+transform = Transform3D(1, 0, 0, 0, 0.99997, 0, 0, 0, 1, -0.233263, -0.380087, 0.73094)
+operation = 2
+size = Vector3(31.8048, 5.30585, 44.7508)
+
+[node name="playerbedroom" type="CSGBox3D" parent="Terrain/House"]
 transform = Transform3D(0.999996, 0, 0, 0, 0.999985, 0, 0, 0, 1, 16.2365, -7.21635, 1.85127)
 use_collision = true
 size = Vector3(12.3251, 5.89309, 15.288)
 
-[node name="w1" type="CSGBox3D" parent="Node3D/playerbedroom"]
+[node name="w1" type="CSGBox3D" parent="Terrain/House/playerbedroom"]
 transform = Transform3D(1, 0, 0, 0, 0.999985, 0, 0, 0, 1, 0.0426393, -0.686915, -1.02709)
 operation = 2
 size = Vector3(11.886, 5.27811, 16.8184)
 
-[node name="doorbed" type="CSGBox3D" parent="Node3D/playerbedroom"]
+[node name="doorbed" type="CSGBox3D" parent="Terrain/House/playerbedroom"]
 transform = Transform3D(1, 0, 0, 0, 0.999998, 0, 0, 0, 1, -5.63393, -1.48368, -4.2144)
 operation = 2
 size = Vector3(1.36659, 3.08472, 2.9624)
 
-[node name="wall2" type="CSGBox3D" parent="Node3D"]
+[node name="wall2" type="CSGBox3D" parent="Terrain/House"]
 transform = Transform3D(0.999996, 0, 0, 0, 0.999993, 0, 0, 0, 1, -2.80324, -7.15648, -10.0404)
 use_collision = true
 size = Vector3(16.156, 6.37585, 39.5585)
 
-[node name="wall1" type="CSGBox3D" parent="Node3D"]
+[node name="wall1" type="CSGBox3D" parent="Terrain/House"]
 transform = Transform3D(0.999996, 0, 0, 0, 0.999998, 0, 0, 0, 1, 7.3226, -7.1453, -18.3906)
 use_collision = true
 size = Vector3(30, 6.35266, 25)
 
-[node name="doorbed" type="CSGBox3D" parent="Node3D/wall1"]
+[node name="doorbed" type="CSGBox3D" parent="Terrain/House/wall1"]
 transform = Transform3D(-0.0146253, 0, 0.999892, 0, 0.999995, 0, -0.999893, 0, -0.0146253, 0.267141, -1.4988, 10.9992)
 operation = 2
 size = Vector3(3.16489, 3.29041, 2.9624)
+
+[node name="Tablechair" parent="Terrain" instance=ExtResource("3_uyhe6")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.07543, 0.120732, -4.53889)
+
+[node name="interact sphere" parent="." instance=ExtResource("2_gldhi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.810054, 1.43654, -2.7047)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.93525, 2.70821, -7.10025)
 omni_range = 500.0
 omni_attenuation = 0.267943
 
-[node name="Tablechair" parent="." instance=ExtResource("3_uyhe6")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.07543, 0.120732, -4.53889)
+[node name="Ghost" parent="." instance=ExtResource("4_eqi3g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34978, 1.14433, 0.33939)
 
 [connection signal="body_entered" from="Terrain/Bus Stop/Area3D" to="." method="_on_area_3d_body_entered"]
