@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cctyvpij810rs"]
+
+[ext_resource type="ArrayMesh" uid="uid://n5dv6us5l4gc" path="res://Bed.obj" id="1_dnogf"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Bed" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.74887, 0, -4.02499)
+mesh = ExtResource("1_dnogf")
