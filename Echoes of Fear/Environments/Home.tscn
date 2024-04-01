@@ -1,8 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://b5y7ve8rcuiin"]
+[gd_scene load_steps=13 format=3 uid="uid://b5y7ve8rcuiin"]
 
 [ext_resource type="Script" path="res://Environments/Home.gd" id="1_is6ft"]
 [ext_resource type="PackedScene" uid="uid://bkkuxet7c35lf" path="res://Testing/interact_sphere.tscn" id="2_gldhi"]
-[ext_resource type="PackedScene" uid="uid://ccgjh3e4iy4b" path="res://tablechair.tscn" id="3_uyhe6"]
+[ext_resource type="PackedScene" uid="uid://c0iko6osqt8nl" path="res://tablechair.tscn" id="3_uyhe6"]
+[ext_resource type="PackedScene" uid="uid://be0sed0hf4vn3" path="res://Bulliten Board.dae" id="4_qxdra"]
+[ext_resource type="ArrayMesh" uid="uid://n5dv6us5l4gc" path="res://Bed.obj" id="5_gwpj0"]
+[ext_resource type="PackedScene" uid="uid://y4huhg04mbf5" path="res://lightstand.dae" id="6_6rkhr"]
+[ext_resource type="PackedScene" uid="uid://ispgsv5ossuv" path="res://clock.dae" id="7_36d05"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_7s3ny"]
 size = Vector3(100, 0.5, 100)
@@ -105,6 +109,20 @@ omni_range = 500.0
 omni_attenuation = 0.267943
 
 [node name="Tablechair" parent="." instance=ExtResource("3_uyhe6")]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.07543, 0.120732, -4.53889)
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 4.07543, 0.292403, -5.60473)
+
+[node name="Bulliten Board" parent="." instance=ExtResource("4_qxdra")]
+transform = Transform3D(-0.2, 6.97574e-17, -1.74846e-08, 6.97574e-17, 0.2, -6.97574e-17, 1.74846e-08, -6.97574e-17, -0.2, 4.85841, 2.71374, -5.04364)
+
+[node name="Bed" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.5, -1.74393e-16, 1.74393e-16, 1.74393e-16, 0.5, -1.74393e-16, -1.74393e-16, 1.74393e-16, 0.5, 2.4706, 0.764354, -8.62489)
+layers = 1023
+mesh = ExtResource("5_gwpj0")
+
+[node name="lightstand" parent="." instance=ExtResource("6_6rkhr")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 4.39902, 0.509397, -2.75499)
+
+[node name="clock" parent="." instance=ExtResource("7_36d05")]
+transform = Transform3D(-0.3, 1.04636e-16, -2.62268e-08, 1.04636e-16, 0.3, -1.04636e-16, 2.62268e-08, -1.04636e-16, -0.3, 4.90531, 3.60366, -7.3937)
 
 [connection signal="body_entered" from="Terrain/Bus Stop/Area3D" to="." method="_on_area_3d_body_entered"]

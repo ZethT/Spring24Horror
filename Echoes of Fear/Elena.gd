@@ -24,7 +24,7 @@ func _physics_process(delta):
 		velocity.y -= gravity * delta
 
 	# Jump!
-	if Input.is_action_just_pressed("jump") and is_on_floor() and speed != 0:
+	if Input.is_action_just_pressed("jump") and is_on_floor() and SPEED != 0:
 		velocity.y = JUMP_VELOCITY
 
 	# Set velocity based on input direction

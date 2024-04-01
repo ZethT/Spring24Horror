@@ -5,6 +5,8 @@ var player: CharacterBody3D
 var sittingPosition: Vector3
 var originalPosition: Vector3
 
+const TIME = 3
+
 func _ready():
 	# Assuming you've set up the sitting position
 	sittingPosition = Vector3(-3.5, -0.1, 0.5)  # Adjust the position as needed
@@ -31,13 +33,11 @@ func interact(held_item):
 		if player:
 			player.transform.origin = sittingPosition
 			player.velocity = Vector3.ZERO  # Stop player movement
-			player.mouse_mode = Input.MOUSE_MODE_VISIBLE  # Show cursor
 	else:
 		# Stand up (optional: play a stand-up animation)
 		if player:
 			player.transform.origin = originalPosition
 			player.gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
-			player.mouse_mode = Input.MOUSE_MODE_CAPTURED  # Capture mouse again
 
 func grab(hand):
 	pass

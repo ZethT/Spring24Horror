@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://t2lg2rklw3xn"]
+
+[ext_resource type="PackedScene" uid="uid://be0sed0hf4vn3" path="res://Bulliten Board.dae" id="1_vkc0e"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Bulliten Board" parent="." instance=ExtResource("1_vkc0e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.991931, 0, -3.84583)
