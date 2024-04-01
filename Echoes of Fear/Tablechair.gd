@@ -5,9 +5,11 @@ var player: CharacterBody3D
 var sittingPosition: Vector3
 var originalPosition: Vector3
 
+const TIME = 100
+
 func _ready():
 	# Assuming you've set up the sitting position
-	sittingPosition = Vector3(-3.5, -0.1, 0.5)  # Adjust the position as needed
+	sittingPosition = position - Vector3(1.21, 0, -0.5) # Adjust the position as needed
 
 	# Find the player node by name (replace "Elena" with the actual name)
 	player = get_node("/root/Game/Elena")
@@ -22,7 +24,7 @@ func interact(held_item):
 			player.transform.origin = sittingPosition
 			player.velocity = Vector3.ZERO  # Stop player movement
 			player.speed = 0
-			#player.gravity = 0  # Disable gravity temporarily
+			player.gravity = 0  # Disable gravity temporarily
 			#player.mouse_mode = Input.MOUSE_MODE_VISIBLE  # Show cursor
 	else:
 		# Stand up (optional: play a stand-up animation)
