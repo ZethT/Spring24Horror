@@ -25,6 +25,10 @@ Stats="*res://stats.gd"
 window/size/viewport_width=1920
 window/size/viewport_height=1080
 
+[filesystem]
+
+import/fbx/enabled=false
+
 [input]
 
 left={
@@ -69,3 +73,7 @@ interact={
 3d_physics/layer_2="player"
 3d_physics/layer_3="npcs"
 3d_physics/layer_4="objects"
+
+[rendering]
+
+shading/overrides/force_vertex_shading=true
