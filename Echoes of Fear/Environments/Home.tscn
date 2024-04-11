@@ -1,8 +1,8 @@
-[gd_scene load_steps=151 format=3 uid="uid://b5y7ve8rcuiin"]
+[gd_scene load_steps=152 format=3 uid="uid://b5y7ve8rcuiin"]
 
 [ext_resource type="Script" path="res://Environments/Home.gd" id="1_is6ft"]
 [ext_resource type="PackedScene" uid="uid://bkkuxet7c35lf" path="res://Testing/interact_sphere.tscn" id="2_gldhi"]
-[ext_resource type="PackedScene" uid="uid://ccgjh3e4iy4b" path="res://tablechair.tscn" id="3_uyhe6"]
+[ext_resource type="PackedScene" path="res://tablechair.tscn" id="3_uyhe6"]
 [ext_resource type="PackedScene" uid="uid://cwhnxdadktxvo" path="res://NPCs/Ghost.tscn" id="4_eqi3g"]
 [ext_resource type="PackedScene" uid="uid://dmexes2g1y65y" path="res://window!.tscn" id="5_bqc0m"]
 [ext_resource type="PackedScene" uid="uid://cv76tqji7p34c" path="res://NPCs/uploads_files_2406339_DishRack.gltf" id="6_d6mtq"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dr5x3vb2j4j60" path="res://NPCs/toliet.glb" id="8_2fkds"]
 [ext_resource type="PackedScene" uid="uid://ba0brm2xv7mh3" path="res://NPCs/uploads_files_4591109_format4_dae.dae" id="9_oan4c"]
 [ext_resource type="PackedScene" uid="uid://h7eksix7nb56" path="res://NPCs/uploads_files_2406301_Bathtub.gltf" id="10_kr0pg"]
+[ext_resource type="PackedScene" uid="uid://ne2ecbin1bn2" path="res://human_v_032.tscn" id="12_30asv"]
 [ext_resource type="PackedScene" uid="uid://b370vpmmfmljv" path="res://Bulliten Board.dae" id="12_gngoq"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_63e3b"]
@@ -2757,5 +2758,8 @@ transform = Transform3D(2.68482, 0, 0, 0, 1.8505, 0, 0, 0, 2.60186, -11.1618, 0.
 
 [node name="Bulliten Board" parent="." instance=ExtResource("12_gngoq")]
 transform = Transform3D(-1.09278e-08, -8.71967e-17, -0.25, 8.71967e-17, 0.25, -8.71967e-17, 0.25, -8.71967e-17, -1.09278e-08, 1.60859, 2.16098, -10.5602)
+
+[node name="human v032" parent="." instance=ExtResource("12_30asv")]
+transform = Transform3D(0.13, 0, 0, 0, 0.13, 0, 0, 0, 0.13, -9.32756, 2.22918, 5.59652)
 
 [connection signal="body_entered" from="Terrain/Bus Stop/Area3D" to="." method="_on_area_3d_body_entered"]
