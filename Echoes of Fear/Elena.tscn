@@ -1,9 +1,15 @@
-[gd_scene load_steps=7 format=3 uid="uid://t6spb3v41lh"]
+[gd_scene load_steps=8 format=3 uid="uid://t6spb3v41lh"]
 
 [ext_resource type="Script" path="res://Elena.gd" id="1_ck4s4"]
 [ext_resource type="Script" path="res://UI.gd" id="2_au1xw"]
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" path="res://paper.png" id="3_ip1dq"]
 [ext_resource type="Texture2D" path="res://ring_texture.png" id="3_u7fai"]
+=======
+[ext_resource type="Texture2D" uid="uid://cfppxev5irwoa" path="res://paper.png" id="3_ip1dq"]
+[ext_resource type="Texture2D" uid="uid://v2lii8vb7jly" path="res://ring_texture.png" id="3_u7fai"]
+[ext_resource type="AudioStream" uid="uid://7tkfqv3olaq2" path="res://audio/regularfootstep001-47145.mp3" id="5_805a3"]
+>>>>>>> Stashed changes
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kb7n7"]
 
@@ -112,3 +118,7 @@ fill_mode = 4
 texture_under = ExtResource("3_u7fai")
 texture_progress = ExtResource("3_u7fai")
 tint_progress = Color(0.478431, 0.478431, 0.478431, 1)
+
+[node name="concreteFootsteps" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_805a3")
+volume_db = -20.0
