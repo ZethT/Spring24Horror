@@ -1,4 +1,4 @@
-[gd_scene load_steps=185 format=3 uid="uid://b5y7ve8rcuiin"]
+[gd_scene load_steps=184 format=3 uid="uid://b5y7ve8rcuiin"]
 
 [ext_resource type="Script" path="res://Environments/Home.gd" id="1_is6ft"]
 [ext_resource type="Texture2D" uid="uid://doh7um0qaqlgo" path="res://grass.png" id="2_6w7eu"]
@@ -24,7 +24,6 @@
 [ext_resource type="Texture2D" uid="uid://i3ijdwwst200" path="res://plants_bark.jpg" id="22_ebfop"]
 [ext_resource type="Texture2D" uid="uid://ceupaue62ex5l" path="res://plants_branch-01.png" id="23_qfl5n"]
 [ext_resource type="Texture2D" uid="uid://ceoai5lggktrr" path="res://plants_branch-02.png" id="24_y1e3q"]
-[ext_resource type="PackedScene" path="res://uploads_files_4633919_Furniture.glb" id="25_xomuw"]
 [ext_resource type="PackedScene" path="res://scratching_post_001.glb" id="26_i2q4n"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_63e3b"]
@@ -3394,9 +3393,6 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.6234, -3.8147e-06, 45.5252)
 mesh = SubResource("ArrayMesh_8n5up")
 skeleton = NodePath("")
-
-[node name="uploads_files_4633919_Furniture" parent="." instance=ExtResource("25_xomuw")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.11519, 1.39946, 33.2223)
 
 [node name="scratching_post_0012" parent="." instance=ExtResource("26_i2q4n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.52724, 0.0263162, 0.46612)
