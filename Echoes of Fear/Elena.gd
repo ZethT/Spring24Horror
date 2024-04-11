@@ -9,7 +9,7 @@ var speed = 5.0
 const JUMP_VELOCITY = 4.5
 
 @onready var progress = $UI/Reticle/Progress
-
+@onready var Elenawalking = $Elenawalking
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
 
@@ -33,6 +33,8 @@ func _physics_process(delta):
 	if direction:
 		velocity.x = direction.x * speed
 		velocity.z = direction.z * speed
+		if not Elenawalking.playing:
+			Elenawalking.play()
 	else:
 		velocity.x = 0
 		velocity.z = 0
