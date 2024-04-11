@@ -1,8 +1,9 @@
-[gd_scene load_steps=184 format=3 uid="uid://b5y7ve8rcuiin"]
+[gd_scene load_steps=187 format=3 uid="uid://b5y7ve8rcuiin"]
 
 [ext_resource type="Script" path="res://Environments/Home.gd" id="1_is6ft"]
 [ext_resource type="Texture2D" uid="uid://doh7um0qaqlgo" path="res://grass.png" id="2_6w7eu"]
 [ext_resource type="PackedScene" uid="uid://bkkuxet7c35lf" path="res://Testing/interact_sphere.tscn" id="2_gldhi"]
+[ext_resource type="Texture2D" uid="uid://do88npkbma807" path="res://wall_texture.png" id="3_j5ysk"]
 [ext_resource type="PackedScene" uid="uid://ccgjh3e4iy4b" path="res://tablechair.tscn" id="3_uyhe6"]
 [ext_resource type="PackedScene" uid="uid://cwhnxdadktxvo" path="res://NPCs/Ghost.tscn" id="4_eqi3g"]
 [ext_resource type="PackedScene" uid="uid://dmexes2g1y65y" path="res://window!.tscn" id="5_bqc0m"]
@@ -53,6 +54,13 @@ height = 3.0
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_6jsmt"]
 radius = 1.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ynork"]
+albedo_texture = ExtResource("3_j5ysk")
+uv1_scale = Vector3(3, 3, 3)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o37qd"]
+albedo_texture = ExtResource("3_j5ysk")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_01asa"]
 resource_name = "dbl_D80 wenge-gray_001"
@@ -2573,71 +2581,85 @@ transform = Transform3D(0.559637, 0, 0, 0, 1, 0, 0, 0, 0.557862, -7.52827, 10.10
 transform = Transform3D(1.00163, 0, 0, 0, 1.00157, 0, 0, 0, 1.00163, 5.89546, -7.04559, -1.56026)
 use_collision = true
 size = Vector3(32.8489, 6.0997, 47.2209)
+material = SubResource("StandardMaterial3D_ynork")
 
 [node name="frontdoor" type="CSGBox3D" parent="Terrain/House/bigger1"]
 transform = Transform3D(1, 0, 0, 0, 0.99997, 0, 0, 0, 1, 16.3272, -1.36593, 16.3965)
 operation = 2
 size = Vector3(3.71015, 3.32685, 3.62329)
+material = SubResource("StandardMaterial3D_ynork")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Terrain/House/bigger1"]
 transform = Transform3D(1, 0, 0, 0, 0.99997, 0, 0, 0, 1, -0.233263, -0.380087, 0.73094)
 operation = 2
 size = Vector3(31.8048, 5.30585, 44.7508)
+material = SubResource("StandardMaterial3D_ynork")
 
 [node name="extracgb" type="CSGBox3D" parent="Terrain/House/bigger1"]
 transform = Transform3D(1, 0, 0, 0, 0.99997, 0, 0, 0, 1, -9.01486, -0.51691, 23.2201)
 operation = 2
 size = Vector3(3.16431, 2.48987, 1)
+material = SubResource("StandardMaterial3D_ynork")
 
 [node name="extracgb2" type="CSGBox3D" parent="Terrain/House/bigger1"]
 transform = Transform3D(1, 0, 0, 0, 0.99997, 0, 0, 0, 1, 1.39562, -0.51691, 23.2201)
 operation = 2
 size = Vector3(3.16431, 2.48987, 1)
+material = SubResource("StandardMaterial3D_ynork")
 
 [node name="extracgb3" type="CSGBox3D" parent="Terrain/House/bigger1"]
 transform = Transform3D(1, 0, 0, 0, 0.99997, 0, 0, 0, 1, 10.9967, -0.51691, 23.2201)
 operation = 2
 size = Vector3(3.16431, 2.48987, 1)
+material = SubResource("StandardMaterial3D_ynork")
 
 [node name="playerbedroom" type="CSGBox3D" parent="Terrain/House"]
-transform = Transform3D(0.999996, 0, 0, 0, 0.999985, 0, 0, 0, 1, 16.2365, -7.21635, 1.85127)
+transform = Transform3D(0.999996, 0, 0, 0, 0.999985, 0, 0, 0, 1, 16.0785, -7.21635, 1.85127)
 use_collision = true
 size = Vector3(12.3251, 5.89309, 15.288)
+material = SubResource("StandardMaterial3D_ynork")
 
 [node name="w1" type="CSGBox3D" parent="Terrain/House/playerbedroom"]
 transform = Transform3D(1, 0, 0, 0, 0.999985, 0, 0, 0, 1, 0.0426393, -0.686915, -1.02709)
 operation = 2
 size = Vector3(11.886, 5.27811, 16.8184)
+material = SubResource("StandardMaterial3D_ynork")
 
 [node name="doorbed" type="CSGBox3D" parent="Terrain/House/playerbedroom"]
 transform = Transform3D(1, 0, 0, 0, 0.999998, 0, 0, 0, 1, -5.63393, -1.48368, -4.2144)
 operation = 2
 size = Vector3(1.36659, 3.08472, 2.9624)
+material = SubResource("StandardMaterial3D_ynork")
 
 [node name="wall2" type="CSGBox3D" parent="Terrain/House"]
-transform = Transform3D(0.999996, 0, 0, 0, 0.999993, 0, 0, 0, 1, -2.80324, -7.15648, -17.9533)
+transform = Transform3D(0.999996, 0, 0, 0, 0.999993, 0, 0, 0, 1, -2.40277, -7.15838, -17.9533)
 use_collision = true
 size = Vector3(16.156, 6.37585, 39.5585)
+material = SubResource("StandardMaterial3D_ynork")
 
 [node name="CSGBox3D" type="CSGBox3D" parent="Terrain/House/wall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.262575, 0, 11.8229)
 operation = 2
 size = Vector3(15.2485, 6.376, 14.8337)
+material = SubResource("StandardMaterial3D_ynork")
 
 [node name="doorbath" type="CSGBox3D" parent="Terrain/House/wall2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.19342, -1.37758, 14.5677)
 operation = 2
 size = Vector3(1.77969, 3.0977, 2.962)
+material = SubResource("StandardMaterial3D_ynork")
 
 [node name="wall1" type="CSGBox3D" parent="Terrain/House"]
-transform = Transform3D(0.999996, 0, 0, 0, 0.999998, 0, 0, 0, 1, 7.3226, -7.1453, -18.3906)
+transform = Transform3D(0.999996, 0, 0, 0, 0.999998, 0, 0, 0, 1, 7.3226, -7.05951, -18.3906)
 use_collision = true
-size = Vector3(30, 6.35266, 25)
+size = Vector3(30, 6.14996, 25)
+material = SubResource("StandardMaterial3D_ynork")
 
 [node name="doorbed" type="CSGBox3D" parent="Terrain/House/wall1"]
 transform = Transform3D(-0.0146253, 0, 0.999892, 0, 0.999995, 0, -0.999893, 0, -0.0146253, 0.267141, -1.4988, 10.9992)
 operation = 2
 size = Vector3(3.16489, 3.29041, 2.9624)
+material = SubResource("StandardMaterial3D_o37qd")
 
 [node name="Tablechair" parent="Terrain" instance=ExtResource("3_uyhe6")]
 transform = Transform3D(-0.5, 0, -4.37114e-08, 0, 0.5, 0, 4.37114e-08, 0, -0.5, 1.57466, 0.35587, -8.7043)
