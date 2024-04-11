@@ -73,3 +73,7 @@ interact={
 3d_physics/layer_2="player"
 3d_physics/layer_3="npcs"
 3d_physics/layer_4="objects"
+
+[rendering]
+
+shading/overrides/force_vertex_shading=true

@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmexes2g1y65y"]
+
+[ext_resource type="PackedScene" uid="uid://c2uta2jguy88h" path="res://window!.dae" id="1_hrkjf"]
+
+[node name="window!" instance=ExtResource("1_hrkjf")]
+
+[node name="Cube_004" parent="." index="1"]
+transparency = 0.7
+
+[node name="Cube_001" parent="." index="2"]
+transparency = 0.7
