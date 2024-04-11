@@ -3156,7 +3156,9 @@ mesh = SubResource("PlaneMesh_euq64")
 [node name="bus_with_driver" parent="." instance=ExtResource("19_ulj2f")]
 transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 17.2354, -0.759652, 1.06618)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="bus_with_driver"]
+[node name="RigidBody3D" type="RigidBody3D" parent="bus_with_driver"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="bus_with_driver/RigidBody3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.06252, 2.39755, 0.0121155)
 shape = SubResource("BoxShape3D_yev4y")
 
