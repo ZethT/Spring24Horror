@@ -36,4 +36,4 @@ func _on_follow_timeout():
 	if rng < 0.1:
 		update_target_location(player.global_position)
 	elif rng < 0.3:
-		update_target_location(Vector3(randf_range(-15, 10), 0, randf_range(-10, 30)))
+		update_target_location(Vector3(randf_range(-10, 10), 0, randf_range(-10, 30)))
