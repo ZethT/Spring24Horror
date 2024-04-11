@@ -1,15 +1,16 @@
-[gd_scene load_steps=150 format=3 uid="uid://b5y7ve8rcuiin"]
+[gd_scene load_steps=151 format=3 uid="uid://b5y7ve8rcuiin"]
 
 [ext_resource type="Script" path="res://Environments/Home.gd" id="1_is6ft"]
 [ext_resource type="PackedScene" uid="uid://bkkuxet7c35lf" path="res://Testing/interact_sphere.tscn" id="2_gldhi"]
-[ext_resource type="PackedScene" path="res://tablechair.tscn" id="3_uyhe6"]
+[ext_resource type="PackedScene" uid="uid://ccgjh3e4iy4b" path="res://tablechair.tscn" id="3_uyhe6"]
 [ext_resource type="PackedScene" uid="uid://cwhnxdadktxvo" path="res://NPCs/Ghost.tscn" id="4_eqi3g"]
-[ext_resource type="PackedScene" uid="uid://cq27efj5ey74i" path="res://window.dae" id="5_8ebnm"]
-[ext_resource type="PackedScene" path="res://NPCs/uploads_files_2406339_DishRack.gltf" id="6_d6mtq"]
+[ext_resource type="PackedScene" uid="uid://dmexes2g1y65y" path="res://window!.tscn" id="5_bqc0m"]
+[ext_resource type="PackedScene" uid="uid://cv76tqji7p34c" path="res://NPCs/uploads_files_2406339_DishRack.gltf" id="6_d6mtq"]
 [ext_resource type="PackedScene" uid="uid://b5m2a17ebscmv" path="res://NPCs/3d-model.dae" id="7_v3oxq"]
 [ext_resource type="PackedScene" uid="uid://dr5x3vb2j4j60" path="res://NPCs/toliet.glb" id="8_2fkds"]
 [ext_resource type="PackedScene" uid="uid://ba0brm2xv7mh3" path="res://NPCs/uploads_files_4591109_format4_dae.dae" id="9_oan4c"]
-[ext_resource type="PackedScene" path="res://NPCs/uploads_files_2406301_Bathtub.gltf" id="10_kr0pg"]
+[ext_resource type="PackedScene" uid="uid://h7eksix7nb56" path="res://NPCs/uploads_files_2406301_Bathtub.gltf" id="10_kr0pg"]
+[ext_resource type="PackedScene" uid="uid://b370vpmmfmljv" path="res://Bulliten Board.dae" id="12_gngoq"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_63e3b"]
 vertices = PackedVector3Array(-14.16, 0.1, -24.52, -10.52, 0.1, -25.08, -10.8, 0.1, -49.44, -14.44, 0.1, -22.56, -14.16, 0.1, -24.52, -10.8, 0.1, -49.44, -49.44, 0.1, -49.44, -49.44, 0.1, -22.84, -10.52, 0.1, -25.08, 3.76, 0.1, -25.08, 4.04, 0.1, -49.44, -10.8, 0.1, -49.44, 4.04, 0.1, -49.44, 3.76, 0.1, -25.08, 5.44, 0.1, -25.08, 4.04, 0.1, -49.44, 5.44, 0.1, -25.08, 5.72, 0.1, -24.52, 49.4, 0.1, -24.52, 49.4, 0.1, -49.44, 5.72, 0.1, 0.400002, 4.88, 0.1, 0.68, 4.88, 0.1, 1.24, 5.72, 0.1, 1.52, 49.4, 0.1, 5.16, 49.4, 0.1, -24.52, 5.72, 0.1, -24.52, 5.72, 0.1, 0.400002, 49.4, 0.1, 5.16, 5.72, 0.1, 1.52, 5.72, 0.1, 5.16, 49.4, 0.1, 5.16, 4.6, 6.2, -23.96, -11.36, 6.2, -23.96, -11.64, 6.2, -23.4, -13.04, 6.2, 4.6, 4.6, 6.2, 4.6, -11.64, 6.2, -23.4, -13.32, 6.2, -23.4, -13.04, 6.2, 4.6, -3.8, 0.1, -23.68, -3.8, 0.1, -22, 4.32, 0.1, -22, 4.32, 0.1, -23.68, -13.04, 0.1, -23.12, -13.04, 0.1, -22, -12.48, 0.1, -22, -12.48, 0.1, -23.12, -11.08, 0.1, -23.12, -11.08, 0.1, -22, -5.2, 0.1, -22, -5.2, 0.1, -23.12, -49.44, 0.1, 6, -34.6, 0.1, 6, -34.32, 0.1, 5.16, -49.44, 0.1, -22.84, -33.2, 0.1, 5.16, -32.92, 0.1, 5.72, -14.16, 0.1, 5.16, -33.2, 0.1, 5.16, -14.16, 0.1, 5.16, -14.44, 0.1, -22.56, -49.44, 0.1, -22.84, -49.44, 0.1, -22.84, -34.32, 0.1, 5.16, -33.2, 0.1, 5.16, -11.08, 0.1, -19.48, -11.08, 0.1, -11.36, -5.2, 0.1, -11.36, -5.2, 0.1, -19.48, -2.12, 0.1, -13.04, -1.84, 0.1, -11.36, 3.76, 0.1, -11.36, -3.8, 0.1, -19.48, -3.8, 0.1, -13.04, -2.12, 0.1, -13.04, -2.12, 0.1, -13.04, 3.76, 0.1, -11.36, 3.76, 0.1, -19.48, -3.8, 0.1, -19.48, -1, 0.1, -2.68, 2.08, 0.1, -2.68, 1.52, 0.1, -3.24, -1, 0.1, -2.68, 1.52, 0.1, -3.24, 1.52, 0.1, -4.64, -1.28, 0.1, -8.56, -1, 0.1, -9.96, -1.28, 0.1, -8.84, -1.28, 0.1, -8.56, 1.52, 0.1, -4.64, 3.76, 0.1, -5.48, 3.76, 0.1, -9.96, -3.8, 0.1, -3.24, -2.68, 0.1, -3.52, -2.68, 0.1, -8.28, -3.52, 0.1, -11.64, -1.28, 0.1, -8.56, -1.28, 0.1, -8.84, -2.4, 0.1, -8.84, -2.68, 0.1, -8.28, -2.4, 0.1, -8.84, -3.52, 0.1, -11.64, -2.68, 0.1, -8.28, -12.48, 0.1, -2.4, -5.2, 0.1, -2.4, -5.2, 0.1, -9.96, -12.48, 0.1, -10.24, 3.76, 0.1, 1.52, 4.88, 0.1, 1.24, 4.88, 0.1, 0.68, 3.76, 0.1, 0.400002, 3.76, 0.1, 4.04, 3.76, 0.1, 1.52, -2.4, 0.1, -1.28, -4.08, 0.1, -1, -2.4, 0.1, -1.28, -2.68, 0.1, -3.52, -3.8, 0.1, -3.24, -4.08, 0.1, -1, -4.08, 0.1, -1, -12.48, 0.1, -1, -12.48, 0.1, 4.04, 3.76, 0.1, 4.04, 3.76, 0.1, 0.400002, 3.76, 0.1, -1.28, -2.4, 0.1, -1.28, 3.76, 0.1, 1.52, 3.76, 0.1, 0.400002, -2.4, 0.1, -1.28, -34.32, 0.1, 6.84, -34.6, 0.1, 6, -49.44, 0.1, 6, -49.44, 0.1, 49.4, -13.88, 0.1, 5.72, -14.16, 0.1, 5.16, -32.92, 0.1, 5.72, -33.2, 0.1, 6.84, -33.2, 0.1, 6.84, -34.32, 0.1, 6.84, -49.44, 0.1, 49.4, -11.64, 0.1, 5.72, -13.88, 0.1, 5.72, -33.2, 0.1, 6.84, -49.44, 0.1, 49.4, -11.64, 0.1, 49.4, 5.44, 0.1, 5.72, 3.2, 0.1, 5.72, 3.2, 0.1, 49.4, 49.4, 0.1, 5.16, 5.72, 0.1, 5.16, 5.44, 0.1, 5.72, 3.2, 0.1, 49.4, 49.4, 0.1, 49.4, -11.64, 0.1, 49.4, 3.2, 0.1, 49.4, 3.2, 0.1, 5.72, -11.64, 0.1, 5.72)
@@ -861,7 +862,6 @@ size = Vector3(1, 0.869141, 0.790283)
 size = Vector3(0.308716, 0.713837, 0.641724)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cu0on"]
-load_path = "res://.godot/imported/uploads_files_4633919_Furniture_Textures.png-f6de5345afb96d05879ac8bb3fa32d2b.s3tc.ctex"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rve17"]
 resource_name = "Material"
@@ -2302,17 +2302,17 @@ omni_attenuation = 0.267943
 [node name="Ghost" parent="." instance=ExtResource("4_eqi3g")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34978, 1.14433, 0.33939)
 
-[node name="window" parent="." instance=ExtResource("5_8ebnm")]
-transform = Transform3D(0.00078824, 0, -0.443, 0, 0.415, 0, 1.88134, 0, 0.000185607, -9.28101, 2.54764, 4.70966)
+[node name="window!5" parent="." instance=ExtResource("5_bqc0m")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -13.435, 1.4408, 1.198)
 
-[node name="window2" parent="." instance=ExtResource("5_8ebnm")]
-transform = Transform3D(-1.57462, 0, -0.000328096, 0, 0.414738, 0, 0.00199645, 0, -0.524315, -13.2133, 2.46505, 1.1981)
+[node name="window!" parent="." instance=ExtResource("5_bqc0m")]
+transform = Transform3D(-3.49691e-08, 2.44151e-16, 0.65, 2.79029e-16, 0.7, -2.26711e-16, -0.8, 2.44151e-16, -2.84124e-08, -9.31723, 1.4408, 5.04148)
 
-[node name="window3" parent="." instance=ExtResource("5_8ebnm")]
-transform = Transform3D(-9.86767e-08, 0, 0.432966, 0, 0.414738, 0, -2.25746, 0, -1.89255e-08, 1.9422, 2.548, 5.15077)
+[node name="window!2" parent="." instance=ExtResource("5_bqc0m")]
+transform = Transform3D(-3.49691e-08, 2.44151e-16, 0.65, 2.79029e-16, 0.7, -2.26711e-16, -0.8, 2.44151e-16, -2.84124e-08, -3.47232, 1.3781, 5.04148)
 
-[node name="window4" parent="." instance=ExtResource("5_8ebnm")]
-transform = Transform3D(0.00078824, 0, -0.443, 0, 0.415, 0, 1.88134, 0, 0.000185607, -3.45561, 2.54764, 4.70722)
+[node name="window!3" parent="." instance=ExtResource("5_bqc0m")]
+transform = Transform3D(-3.49691e-08, 2.44151e-16, 0.65, 2.79029e-16, 0.7, -2.26711e-16, -0.8, 2.44151e-16, -2.84124e-08, 1.92333, 1.4408, 5.04148)
 
 [node name="Counter2" type="Node3D" parent="."]
 transform = Transform3D(-1.02459e-07, 0, 2.0644, 0, 1.523, 0, -2.34399, 0, -9.02378e-08, -12.6945, 0.0431107, -0.848621)
@@ -2754,5 +2754,8 @@ transform = Transform3D(-4.37114e-08, 0, 1.26778, 0, 1.28201, 0, -1, 0, -5.54164
 
 [node name="uploads_files_2406301_Bathtub" parent="." instance=ExtResource("10_kr0pg")]
 transform = Transform3D(2.68482, 0, 0, 0, 1.8505, 0, 0, 0, 2.60186, -11.1618, 0.0518242, -6.58434)
+
+[node name="Bulliten Board" parent="." instance=ExtResource("12_gngoq")]
+transform = Transform3D(-1.09278e-08, -8.71967e-17, -0.25, 8.71967e-17, 0.25, -8.71967e-17, 0.25, -8.71967e-17, -1.09278e-08, 1.60859, 2.16098, -10.5602)
 
 [connection signal="body_entered" from="Terrain/Bus Stop/Area3D" to="." method="_on_area_3d_body_entered"]
