@@ -13,7 +13,7 @@ dest_files=["res://.godot/imported/cat_bowl.glb-9e96e8bbed4e9796cd270973602a8823
 
 [params]
 
-nodes/root_type=""
+nodes/root_type="StaticBody3D"
 nodes/root_name=""
 nodes/apply_root_scale=true
 nodes/root_scale=1.0
