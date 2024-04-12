@@ -1,29 +1,30 @@
-[gd_scene load_steps=187 format=3 uid="uid://b5y7ve8rcuiin"]
+[gd_scene load_steps=189 format=3 uid="uid://b5y7ve8rcuiin"]
 
 [ext_resource type="Script" path="res://Environments/Home.gd" id="1_is6ft"]
-[ext_resource type="Texture2D" uid="uid://doh7um0qaqlgo" path="res://grass.png" id="2_6w7eu"]
+[ext_resource type="Texture2D" path="res://grass.png" id="2_6w7eu"]
 [ext_resource type="PackedScene" uid="uid://bkkuxet7c35lf" path="res://Testing/interact_sphere.tscn" id="2_gldhi"]
 [ext_resource type="PackedScene" uid="uid://ccgjh3e4iy4b" path="res://tablechair.tscn" id="3_uyhe6"]
 [ext_resource type="PackedScene" uid="uid://cwhnxdadktxvo" path="res://NPCs/Ghost.tscn" id="4_eqi3g"]
-[ext_resource type="PackedScene" uid="uid://dmexes2g1y65y" path="res://window!.tscn" id="5_bqc0m"]
+[ext_resource type="PackedScene" path="res://window!.tscn" id="5_bqc0m"]
 [ext_resource type="PackedScene" uid="uid://cv76tqji7p34c" path="res://NPCs/uploads_files_2406339_DishRack.gltf" id="6_d6mtq"]
 [ext_resource type="PackedScene" uid="uid://b5m2a17ebscmv" path="res://NPCs/3d-model.dae" id="7_v3oxq"]
+[ext_resource type="Texture2D" path="res://uploads_files_4633919_Furniture_Textures.png" id="7_y65hj"]
 [ext_resource type="PackedScene" uid="uid://dr5x3vb2j4j60" path="res://NPCs/toliet.glb" id="8_2fkds"]
 [ext_resource type="PackedScene" uid="uid://ba0brm2xv7mh3" path="res://NPCs/uploads_files_4591109_format4_dae.dae" id="9_oan4c"]
 [ext_resource type="PackedScene" uid="uid://h7eksix7nb56" path="res://NPCs/uploads_files_2406301_Bathtub.gltf" id="10_kr0pg"]
-[ext_resource type="PackedScene" uid="uid://ne2ecbin1bn2" path="res://human_v_032.tscn" id="12_30asv"]
-[ext_resource type="PackedScene" uid="uid://b370vpmmfmljv" path="res://Bulliten Board.dae" id="12_gngoq"]
-[ext_resource type="PackedScene" uid="uid://bjbn0xr5a5ytx" path="res://cat_bowl.glb" id="13_dkq7o"]
-[ext_resource type="Texture2D" uid="uid://dbewxt1r0mr4h" path="res://floor_texture.jpg" id="16_jf400"]
-[ext_resource type="Environment" uid="uid://bp88or08673r3" path="res://Environments/home_environment_morning.tres" id="17_s0ars"]
-[ext_resource type="Texture2D" uid="uid://coe851we55ewj" path="res://road_texture.png" id="18_nluwm"]
+[ext_resource type="PackedScene" path="res://human_v_032.tscn" id="12_30asv"]
+[ext_resource type="PackedScene" path="res://Bulliten Board.dae" id="12_gngoq"]
+[ext_resource type="PackedScene" path="res://cat_bowl.glb" id="13_dkq7o"]
+[ext_resource type="Texture2D" path="res://floor_texture.jpg" id="16_jf400"]
+[ext_resource type="Environment" uid="uid://r52b4hgc31h" path="res://Environments/home_environment_morning.tres" id="17_s0ars"]
+[ext_resource type="Texture2D" path="res://road_texture.png" id="18_nluwm"]
 [ext_resource type="PackedScene" uid="uid://c72yqgk3p4tqy" path="res://Objects/bus_with_driver.tscn" id="19_ulj2f"]
-[ext_resource type="Texture2D" uid="uid://cpa60r2xcj3e2" path="res://plants_hedge-01.png" id="20_3x5m2"]
-[ext_resource type="Texture2D" uid="uid://du48dis7pm1yo" path="res://plants_hedge-02.png" id="21_ccipv"]
-[ext_resource type="Texture2D" uid="uid://i3ijdwwst200" path="res://plants_bark.jpg" id="22_ebfop"]
-[ext_resource type="Texture2D" uid="uid://ceupaue62ex5l" path="res://plants_branch-01.png" id="23_qfl5n"]
-[ext_resource type="PackedScene" uid="uid://dql2l1bdu38ms" path="res://cat_food.tscn" id="24_kq2p1"]
-[ext_resource type="Texture2D" uid="uid://ceoai5lggktrr" path="res://plants_branch-02.png" id="24_y1e3q"]
+[ext_resource type="Texture2D" path="res://plants_hedge-01.png" id="20_3x5m2"]
+[ext_resource type="Texture2D" path="res://plants_hedge-02.png" id="21_ccipv"]
+[ext_resource type="Texture2D" path="res://plants_bark.jpg" id="22_ebfop"]
+[ext_resource type="Texture2D" path="res://plants_branch-01.png" id="23_qfl5n"]
+[ext_resource type="PackedScene" path="res://cat_food.tscn" id="24_kq2p1"]
+[ext_resource type="Texture2D" path="res://plants_branch-02.png" id="24_y1e3q"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_63e3b"]
 vertices = PackedVector3Array(-14.44, 0.1, -28.72, -12.48, 0.1, -29, -12.76, 0.1, -49.44, -49.44, 0.1, -49.44, -49.44, 0.1, -27.32, -49.44, 0.1, -27.32, -14.44, 0.1, -27.04, -14.44, 0.1, -28.72, -12.48, 0.1, -29, -5.76, 0.1, -29, -5.48, 0.1, -49.44, -12.76, 0.1, -49.44, -3.8, 0.1, -28.72, -3.8, 0.1, -25.08, 3.76, 0.1, -25.08, -5.48, 0.1, -49.44, -5.76, 0.1, -29, -3.8, 0.1, -28.72, -3.8, 0.1, -28.72, 3.76, 0.1, -25.08, 4.04, 0.1, -49.44, -5.48, 0.1, -49.44, 4.04, 0.1, -49.44, 3.76, 0.1, -25.08, 5.72, 0.1, -24.8, 49.4, 0.1, -22.56, 49.4, 0.1, -49.44, 5.72, 0.1, -24.8, 5.72, 0.1, -22.56, 49.4, 0.1, -22.56, -4.64, 6.2, -23.96, -4.92, 6.2, -27.88, -13.32, 6.2, -27.88, -13.04, 6.2, 4.6, 4.6, 6.2, 4.6, 4.6, 6.2, -23.96, -4.64, 6.2, -23.96, -13.04, 6.2, 4.6, -13.04, 0.1, -22, -12.48, 0.1, -22, -12.2, 0.1, -25.08, -13.04, 0.1, -27.6, -12.2, 0.1, -25.08, -5.2, 0.1, -25.08, -5.2, 0.1, -27.6, -13.04, 0.1, -27.6, -49.44, 0.1, 3.2, -14.16, 0.1, 3.2, -14.44, 0.1, -27.04, -49.44, 0.1, -27.32, -11.08, 0.1, -23.68, -11.08, 0.1, -22, -5.2, 0.1, -22, -5.2, 0.1, -23.68, -3.8, 0.1, -23.68, -3.8, 0.1, -22, 4.32, 0.1, -22, 4.32, 0.1, -23.68, 4.88, 0.1, 0.68, 4.88, 0.1, 1.24, 5.72, 0.1, 1.52, 5.72, 0.1, 0.400002, 5.72, 0.1, -22.56, 5.72, 0.1, 0.400002, 15.24, 0.1, 5.72, 49.4, 0.1, 6.56, 49.4, 0.1, -22.56, 5.72, 0.1, 1.52, 5.72, 0.1, 5.16, 14.12, 0.1, 5.72, 5.72, 0.1, 0.400002, 5.72, 0.1, 1.52, 14.12, 0.1, 5.72, 15.24, 0.1, 5.72, 15.24, 0.1, 5.72, 15.52, 0.1, 6.56, 49.4, 0.1, 6.56, -11.08, 0.1, -19.48, -11.08, 0.1, -15.56, -5.2, 0.1, -15.56, -5.2, 0.1, -19.48, -2.12, 0.1, -13.04, -1.84, 0.1, -11.36, 3.76, 0.1, -11.36, -3.8, 0.1, -19.48, -3.8, 0.1, -13.04, -2.12, 0.1, -13.04, -2.12, 0.1, -13.04, 3.76, 0.1, -11.36, 3.76, 0.1, -19.48, -3.8, 0.1, -19.48, -11.08, 0.1, -14.16, -11.08, 0.1, -11.36, -5.48, 0.1, -11.36, -5.48, 0.1, -14.16, -3.24, 0.1, -10.24, -3.24, 0.1, -11.64, -4.08, 0.1, -9.4, -2.4, 0.1, -8.84, -3.24, 0.1, -10.24, -4.08, 0.1, -9.4, -3.8, 0.1, -8.84, -3.8, 0.1, -7.44, -2.68, 0.1, -7.16, -2.4, 0.1, -8.56, -2.4, 0.1, -8.84, -1, 0.1, -8.28, -1, 0.1, -2.68, 0.959999, 0.1, -8, 0.68, 0.1, -9.96, -1, 0.1, -9.96, -1.28, 0.1, -8.84, 0.959999, 0.1, -8, -5.2, 0.1, -9.12, -5.2, 0.1, -9.4, -5.48, 0.1, -9.96, -12.48, 0.1, -10.24, -12.48, 0.1, -7.16, -5.48, 0.1, -7.16, -3.8, 0.1, -8.84, -2.4, 0.1, -8.84, -4.08, 0.1, -9.4, -5.2, 0.1, -9.4, -5.2, 0.1, -9.12, -1, 0.1, -8.28, 0.959999, 0.1, -8, -1.28, 0.1, -8.84, -2.4, 0.1, -8.84, -2.4, 0.1, -8.56, 3.76, 0.1, -2.68, 3.76, 0.1, -8, 0.959999, 0.1, -8, -1, 0.1, -2.68, 4.88, 0.1, 1.24, 4.88, 0.1, 0.68, 3.76, 0.1, 0.400002, 3.76, 0.1, 1.52, 3.76, 0.1, 4.04, 3.76, 0.1, 1.52, -2.68, 0.1, -1.56, -12.48, 0.1, -5.48, -12.48, 0.1, 4.04, -2.68, 0.1, -7.16, -3.8, 0.1, -7.44, -4.08, 0.1, -5.48, -2.68, 0.1, -1.56, -2.68, 0.1, -1.56, -4.08, 0.1, -5.48, -12.48, 0.1, -5.48, 3.76, 0.1, 0.400002, 3.76, 0.1, -1.28, -2.68, 0.1, -1.56, 3.76, 0.1, 1.52, 3.76, 0.1, 0.400002, -2.68, 0.1, -1.56, -14.16, 0.1, 5.44, -14.16, 0.1, 3.2, -49.44, 0.1, 3.2, -11.64, 0.1, 5.72, -14.16, 0.1, 5.44, -49.44, 0.1, 3.2, -49.44, 0.1, 49.4, -11.64, 0.1, 49.4, 13.84, 0.1, 6.84, 14.12, 0.1, 5.72, 5.72, 0.1, 5.16, 5.44, 0.1, 5.72, 14.68, 0.1, 7.12, 13.84, 0.1, 6.84, 5.44, 0.1, 5.72, 3.2, 0.1, 5.72, 3.2, 0.1, 49.4, 14.68, 0.1, 49.4, -11.64, 0.1, 49.4, 3.2, 0.1, 49.4, 3.2, 0.1, 5.72, -11.64, 0.1, 5.72, 49.4, 0.1, 6.56, 15.52, 0.1, 6.56, 14.68, 0.1, 7.12, 14.68, 0.1, 49.4, 49.4, 0.1, 49.4)
@@ -878,6 +879,9 @@ size = Vector3(1, 0.869141, 0.790283)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_8q51q"]
 size = Vector3(0.308716, 0.713837, 0.641724)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rt0u4"]
+albedo_texture = ExtResource("7_y65hj")
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cu0on"]
 
@@ -2919,201 +2923,241 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.59706, 0.0427241, 15.9277)
 
 [node name="bathroom_item_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(-6.46469e-08, 0, 1.24413, 0, 1.61893, 0, -1.47895, 0, -5.43825e-08, 5.39459, 0.0152736, -22.2946)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_u1vww")
 skeleton = NodePath("")
 
 [node name="washing_machine_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(-1.95272, 0, -1.45285e-07, 0, 1.69075, 0, 1.70712e-07, 0, -1.66186, 1.1531, -0.00482571, -22.9576)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_kt43x")
 skeleton = NodePath("")
 
 [node name="bed_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(-7.7306e-08, 0, -1.40567, 0, 1.57176, 0, 1.76856, 0, -6.14438e-08, 9.43996, -0.003553, -19.3509)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_5psih")
 skeleton = NodePath("")
 
 [node name="closet_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.3372, -6.1522, 23.815)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_sxky7")
 skeleton = NodePath("")
 
 [node name="closet_002" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(-1.53898, 0, -1.50241e-07, 0, 1.5259, 0, 1.34542e-07, 0, -1.71856, 10.628, -0.00743222, -11.7301)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_f8rfp")
 skeleton = NodePath("")
 
 [node name="clothes_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(-0.171438, 0.984808, 0.0276195, 0.159054, -4.47035e-08, 0.98727, 0.972271, 0.173648, -0.156638, 8.04463, 0.117063, -22.3481)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_h8xkk")
 skeleton = NodePath("")
 
 [node name="clothes_002" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(0.665595, 0, -0.746313, 0, 1, 0, 0.746313, 0, 0.665595, 9.88004, 0.0264167, -21.5557)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_vdl4w")
 skeleton = NodePath("")
 
 [node name="coffee_table_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.52099, 0.0442557, -13.4835)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_kab78")
 skeleton = NodePath("")
 
 [node name="door_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(-6.23415e-08, 0, 1, 0, 1.3808, 0, -1.42621, 0, -4.37114e-08, 11.4652, 0.00238371, -14.1103)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_nwwb4")
 skeleton = NodePath("")
 
 [node name="door_frame_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(-6.67673e-08, 0, 1, 0, 1.3774, 0, -1.52746, 0, -4.37114e-08, 11.4735, 0, -14.017)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_ugxx3")
 skeleton = NodePath("")
 
 [node name="coffee_machine_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(-6.25473e-08, 0, 1, 0, 1.20198, 0, -1.43091, 0, -4.37114e-08, -6.02578, 1.14075, -14.6639)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_xmg5r")
 skeleton = NodePath("")
 
 [node name="camera_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.769152, 1.30833, -14.2816)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_2f6o2")
 skeleton = NodePath("")
 
 [node name="air_hockey_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.27666, -5.8285, 25.3125)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_aw173")
 skeleton = NodePath("")
 
 [node name="flower_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.16244, 1.29436, -14.4984)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_t411t")
 skeleton = NodePath("")
 
 [node name="kitchen_chair_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.24585, -6.15417, 27.7536)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_3ntrj")
 skeleton = NodePath("")
 
 [node name="kitchen_table_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(-6.55122e-08, 0, 1.33014, 0, 1.26135, 0, -1.49875, 0, -5.81422e-08, -5.98265, 0, -14.2995)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_6ix68")
 skeleton = NodePath("")
 
 [node name="fridge_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(-7.64005e-08, 0, 1.82086, 0, 1.16478, 0, -1.74784, 0, -7.95923e-08, -6.07334, -0.00987363, -16.9694)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_s46p6")
 skeleton = NodePath("")
 
 [node name="microwave_oven_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(-5.98729e-08, 0, 1, 0, 1.51012, 0, -1.36973, 0, -4.37114e-08, -6.14949, 1.16087, -13.6815)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_fkigy")
 skeleton = NodePath("")
 
 [node name="kitchen_sink_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(-4.75581e-08, 0, 1.35502, 0, 1.01966, 0, -1.088, 0, -5.92298e-08, -5.98208, -0.0237619, -11.7478)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_j5es3")
 skeleton = NodePath("")
 
 [node name="lamp_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.53152, 1.4035, -21.0106)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_ufr1f")
 skeleton = NodePath("")
 
 [node name="lamp_002" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1.15149, 0, 0, 0, 1.24156, 0, 0, 0, 1.16842, 10.2936, 0.00450313, -22.6915)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_pvot6")
 skeleton = NodePath("")
 
 [node name="lounge_chair_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(-0.929635, 0, 0.368481, 0, 1, 0, -0.368481, 0, -0.929635, 5.15766, 0.00362215, -12.3586)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_f7gc7")
 skeleton = NodePath("")
 
 [node name="musical_instrument_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.257, -4.25031, 26.3933)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_bak36")
 skeleton = NodePath("")
 
 [node name="office_table_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.8941, -6.16162, 26.3877)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_82x0k")
 skeleton = NodePath("")
 
 [node name="scratching_post_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(2.00498, 0, 0, 0, 1.80091, 0, 0, 0, 1.61089, 5.37923, 6.64592e-06, -17.4351)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_xlhx3")
 skeleton = NodePath("")
 
 [node name="box_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60959, 1.28654, -13.854)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_8ynyo")
 skeleton = NodePath("")
 
 [node name="dresser_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(-6.32643e-08, 0, 1.55272, 0, 1.39, 0, -1.44732, 0, -6.78717e-08, 5.41594, -0.0222865, -20.6752)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_eb5pl")
 skeleton = NodePath("")
 
 [node name="ketchup_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.24633, 1.31652, -14.09)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_ewjqc")
 skeleton = NodePath("")
 
 [node name="dish_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.70659, 1.30001, -14.0787)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_1alwo")
 skeleton = NodePath("")
 
 [node name="dish_002" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4317, 1.28733, -14.076)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_mnpk1")
 skeleton = NodePath("")
 
 [node name="drink_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.88538, 1.30851, -14.0891)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_wtkrg")
 skeleton = NodePath("")
 
 [node name="drink_002" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0774, 1.29495, -14.0899)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_yat3c")
 skeleton = NodePath("")
 
 [node name="toy_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.161, -4.24703, 27.7057)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_hfcjh")
 skeleton = NodePath("")
 
 [node name="toy_002" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.72934, -4.24632, 24.8398)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_0q70a")
 skeleton = NodePath("")
 
 [node name="sofa_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(-1.37747, 0, -1.18922e-07, 0, 1.50423, 0, 1.20422e-07, 0, -1.36031, 7.42748, 0.00409609, -12.0224)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_jhehs")
 skeleton = NodePath("")
 
 [node name="dumbbell_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.90361, -2.96511, 27.5171)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_mj74v")
 skeleton = NodePath("")
 
 [node name="training_item_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.24111, -4.21238, 26.5688)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_yvrih")
 skeleton = NodePath("")
 
 [node name="dumbbell_002" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.90225, -1.96768, 27.9052)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_osqlv")
 skeleton = NodePath("")
 
 [node name="training_item_002" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.84632, -6.15554, 27.7259)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_mrwld")
 skeleton = NodePath("")
 
 [node name="tv_wall_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.75419, 0.0568718, -17.3193)
+material_override = SubResource("StandardMaterial3D_rt0u4")
 mesh = SubResource("ArrayMesh_x51x0")
 skeleton = NodePath("")
 
