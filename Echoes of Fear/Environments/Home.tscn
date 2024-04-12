@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Environments/Home.gd" id="1_is6ft"]
 [ext_resource type="PackedScene" uid="uid://bkkuxet7c35lf" path="res://Testing/interact_sphere.tscn" id="2_gldhi"]
-[ext_resource type="PackedScene" path="res://tablechair.tscn" id="3_uyhe6"]
+[ext_resource type="PackedScene" uid="uid://ccgjh3e4iy4b" path="res://tablechair.tscn" id="3_uyhe6"]
 [ext_resource type="PackedScene" uid="uid://cwhnxdadktxvo" path="res://NPCs/Ghost.tscn" id="4_eqi3g"]
 [ext_resource type="PackedScene" uid="uid://cq27efj5ey74i" path="res://window.dae" id="5_8ebnm"]
 [ext_resource type="PackedScene" uid="uid://cv76tqji7p34c" path="res://NPCs/uploads_files_2406339_DishRack.gltf" id="6_d6mtq"]
@@ -861,7 +861,6 @@ size = Vector3(1, 0.869141, 0.790283)
 size = Vector3(0.308716, 0.713837, 0.641724)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_cu0on"]
-load_path = "res://.godot/imported/uploads_files_4633919_Furniture_Textures.png-f6de5345afb96d05879ac8bb3fa32d2b.s3tc.ctex"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rve17"]
 resource_name = "Material"
