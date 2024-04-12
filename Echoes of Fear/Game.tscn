@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://ddskb0p1k5uxi"]
 
-[ext_resource type="PackedScene" uid="uid://t6spb3v41lh" path="res://Elena.tscn" id="1_ctpqe"]
+[ext_resource type="PackedScene" path="res://Elena.tscn" id="1_ctpqe"]
 [ext_resource type="Script" path="res://Game.gd" id="1_mug4m"]
 [ext_resource type="PackedScene" uid="uid://b5y7ve8rcuiin" path="res://Environments/Home.tscn" id="2_gi724"]
 [ext_resource type="PackedScene" uid="uid://ccu351y3rnhy" path="res://Environments/School.tscn" id="3_8i1aq"]
