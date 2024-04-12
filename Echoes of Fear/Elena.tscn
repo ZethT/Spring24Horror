@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://t6spb3v41lh"]
+[gd_scene load_steps=9 format=3 uid="uid://t6spb3v41lh"]
 
 [ext_resource type="Script" path="res://Elena.gd" id="1_ck4s4"]
 [ext_resource type="Script" path="res://UI.gd" id="2_au1xw"]
 [ext_resource type="Texture2D" uid="uid://cfppxev5irwoa" path="res://paper.png" id="3_ip1dq"]
 [ext_resource type="Texture2D" uid="uid://v2lii8vb7jly" path="res://ring_texture.png" id="3_u7fai"]
 [ext_resource type="AudioStream" uid="uid://c1fx0n4iaqqyc" path="res://audio/ElenaWalking.mp3" id="5_08vpg"]
+[ext_resource type="AudioStream" uid="uid://cs5umeu03idyq" path="res://audio/Select.mp3" id="6_jr3j6"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kb7n7"]
 
@@ -116,3 +117,6 @@ tint_progress = Color(0.478431, 0.478431, 0.478431, 1)
 
 [node name="Elenawalking" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("5_08vpg")
+
+[node name="Select" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_jr3j6")
