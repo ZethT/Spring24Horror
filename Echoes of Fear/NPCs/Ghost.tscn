@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 [gd_scene load_steps=6 format=3 uid="uid://cwhnxdadktxvo"]
 
 [ext_resource type="Script" path="res://NPCs/Ghost.gd" id="1_12wvp"]
 [ext_resource type="AudioStream" uid="uid://4l1lsjg4m8vo" path="res://audio/cat.mp3" id="2_wtln4"]
+=======
+[gd_scene load_steps=5 format=3 uid="uid://cwhnxdadktxvo"]
+
+[ext_resource type="Script" path="res://NPCs/Ghost.gd" id="1_12wvp"]
+>>>>>>> Hongyok
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_072cv"]
 albedo_color = Color(0, 0, 0, 1)
@@ -35,7 +41,10 @@ debug_enabled = true
 [node name="follow" type="Timer" parent="."]
 autostart = true
 
+<<<<<<< HEAD
 [node name="catStanding" type="AudioStreamPlayer3D" parent="."]
 stream = ExtResource("2_wtln4")
 
+=======
+>>>>>>> Hongyok
 [connection signal="timeout" from="follow" to="." method="_on_follow_timeout"]
