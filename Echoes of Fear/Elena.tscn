@@ -1,17 +1,20 @@
-[gd_scene load_steps=9 format=3 uid="uid://t6spb3v41lh"]
+[gd_scene load_steps=10 format=3 uid="uid://t6spb3v41lh"]
 
 [ext_resource type="Script" path="res://Elena.gd" id="1_ck4s4"]
 [ext_resource type="Script" path="res://UI.gd" id="2_au1xw"]
+[ext_resource type="Environment" uid="uid://bp88or08673r3" path="res://Environments/home_environment_morning.tres" id="2_ayfxb"]
 [ext_resource type="Texture2D" uid="uid://cfppxev5irwoa" path="res://paper.png" id="3_ip1dq"]
 [ext_resource type="Texture2D" uid="uid://v2lii8vb7jly" path="res://ring_texture.png" id="3_u7fai"]
-[ext_resource type="AudioStream" uid="uid://c1fx0n4iaqqyc" path="res://audio/ElenaWalking.mp3" id="5_08vpg"]
-[ext_resource type="AudioStream" uid="uid://cs5umeu03idyq" path="res://audio/Select.mp3" id="6_jr3j6"]
+[ext_resource type="Shader" path="res://crt.gdshader" id="4_8nayb"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kb7n7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_b0i6m"]
 font_size = 40
 font_color = Color(0.0117647, 0.0588235, 0.196078, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_skq6h"]
+shader = ExtResource("4_8nayb")
 
 [node name="Elena" type="CharacterBody3D"]
 collision_layer = 2
@@ -28,6 +31,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.463011, -0.70587, -0.525859)
 
 [node name="Camera3D" type="Camera3D" parent="Head"]
+environment = ExtResource("2_ayfxb")
 current = true
 
 [node name="RayCast3D" type="RayCast3D" parent="Head"]
@@ -84,6 +88,19 @@ grow_vertical = 2
 text = "Testing"
 label_settings = SubResource("LabelSettings_b0i6m")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="UI/Task List"]
+layer = 5
+follow_viewport_enabled = true
+
+[node name="ColorRect" type="ColorRect" parent="UI/Task List/CanvasLayer"]
+material = SubResource("ShaderMaterial_skq6h")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
 [node name="Reticle" type="Control" parent="UI"]
 layout_mode = 1
 anchors_preset = 8
@@ -114,9 +131,3 @@ fill_mode = 4
 texture_under = ExtResource("3_u7fai")
 texture_progress = ExtResource("3_u7fai")
 tint_progress = Color(0.478431, 0.478431, 0.478431, 1)
-
-[node name="Elenawalking" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("5_08vpg")
-
-[node name="Select" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource("6_jr3j6")
