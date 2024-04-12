@@ -5,10 +5,14 @@ extends CharacterBody3D
 @onready var timer = $follow
 @onready var player = get_node("/root/Game/Elena")
 <<<<<<< HEAD
+<<<<<<< HEAD
 @onready var catStanding = $catStanding
 =======
 
 >>>>>>> Hongyok
+=======
+var wander = true
+>>>>>>> main
 var speed = 2.0
 const JUMP_VELOCITY = 4.5
 
@@ -49,8 +53,9 @@ func update_target_location(target_location):
 
 >>>>>>> Hongyok
 func _on_follow_timeout():
-	var rng = randf()
-	if rng < 0.1:
-		update_target_location(player.global_position)
-	elif rng < 0.3:
-		update_target_location(Vector3(randf_range(-15, 10), 0, randf_range(-10, 30)))
+	if wander:
+		var rng = randf()
+		if rng < 0.1:
+			update_target_location(player.global_position)
+		elif rng < 0.3:
+			update_target_location(Vector3(randf_range(-10, 10), 0, randf_range(-10, 30)))

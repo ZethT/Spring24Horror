@@ -9,7 +9,7 @@ const TIME = 100
 
 func _ready():
 	# Assuming you've set up the sitting position
-	sittingPosition = position - Vector3(1.21, 0, -0.5) # Adjust the position as needed
+	sittingPosition = position - Vector3(-0.3, 0.5, 0.7) # Adjust the position as needed
 
 	# Find the player node by name (replace "Elena" with the actual name)
 	player = get_node("/root/Game/Elena")

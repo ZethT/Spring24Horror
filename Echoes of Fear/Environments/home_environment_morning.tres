@@ -1,0 +1,12 @@
+[gd_resource type="Environment" format=3 uid="uid://bp88or08673r3"]
+
+[resource]
+ambient_light_color = Color(0.360784, 0.498039, 1, 1)
+fog_sun_scatter = 2.9
+fog_density = 0.0049
+volumetric_fog_density = 0.0754
+volumetric_fog_emission_energy = 0.0
+volumetric_fog_length = 10.01
+adjustment_enabled = true
+adjustment_brightness = 0.63
+adjustment_saturation = 0.4
