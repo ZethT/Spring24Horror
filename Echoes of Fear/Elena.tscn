@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://t6spb3v41lh"]
+[gd_scene load_steps=10 format=3 uid="uid://t6spb3v41lh"]
 
 [ext_resource type="Script" path="res://Elena.gd" id="1_ck4s4"]
 [ext_resource type="Environment" uid="uid://bp88or08673r3" path="res://Environments/home_environment_morning.tres" id="2_ayfxb"]
 [ext_resource type="Texture2D" uid="uid://cfppxev5irwoa" path="res://paper.png" id="3_ip1dq"]
 [ext_resource type="Texture2D" uid="uid://v2lii8vb7jly" path="res://ring_texture.png" id="3_u7fai"]
+[ext_resource type="FontFile" uid="uid://8sk6wyjfa33n" path="res://tomhand.ttf" id="4_1kxm8"]
 [ext_resource type="Shader" path="res://crt.gdshader" id="4_8nayb"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_kb7n7"]
@@ -83,7 +84,11 @@ offset_right = 49.0
 offset_bottom = 122.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Testing"
+theme_override_fonts/font = ExtResource("4_1kxm8")
+theme_override_font_sizes/font_size = 20
+text = "eat breakfast
+feed cat
+change clothes"
 label_settings = SubResource("LabelSettings_b0i6m")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="UI/Task List"]
