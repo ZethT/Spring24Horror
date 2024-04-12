@@ -4,19 +4,16 @@
 [ext_resource type="PackedScene" uid="uid://b4qc7trhoxwms" path="res://Table Chair.dae" id="2_0t8kp"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_v2jpk"]
-size = Vector3(4.3208, 1.45069, 3.01697)
+size = Vector3(3.70105, 1.45069, 3.01697)
 
 [node name="Tablechair" type="StaticBody3D"]
-transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 1.21657, -2.38419e-07, -0.540668)
 collision_layer = 8
 script = ExtResource("1_wxxti")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.60532, 2.20139, 1.21519)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.44078, 0.853768, 1.20884)
 shape = SubResource("BoxShape3D_v2jpk")
 
 [node name="Table Chair" parent="." instance=ExtResource("2_0t8kp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.662207, 0, 1.21976)
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.79648, 2.00607, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.656591, -0.0152178, 1.22983)
