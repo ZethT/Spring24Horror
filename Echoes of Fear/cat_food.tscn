@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c5gd4nri5kai5"]
+[gd_scene load_steps=6 format=3 uid="uid://dql2l1bdu38ms"]
 
 [ext_resource type="Texture2D" uid="uid://uav2q6ug7a5o" path="res://cat_food_MatteBlack Base Color.png" id="1_dawm0"]
 
@@ -46,6 +46,7 @@ shadow_mesh = SubResource("ArrayMesh_64s5v")
 points = PackedVector3Array(-1.07819, 0, -1, 1.12039, 0, -1, -1.07819, 0, 1, -1.00006, 2.40838, -1, 1.12039, 0, 1, 0.999865, 2.40838, -1, -1.00006, 2.40838, 1, -0.782245, 2.69646, -1, 0.999865, 2.40838, 1, 0.782051, 2.69646, -1, -0.782245, 2.69646, 1, -0.564216, 2.9842, -1, 0.782051, 2.69646, 1, 0.564023, 2.9842, -1, -0.564216, 2.9842, 1, -0.100825, 3.55446, -1, 0.564023, 2.9842, 1, 0.100631, 3.55446, -1, -0.0694011, 3.55446, 1, 0.0692073, 3.55446, 1)
 
 [node name="cat_food" type="RigidBody3D"]
+collision_layer = 4
 
 [node name="Plane" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.15, 0, 0, 0, 0.15, 0, 0, 0, 0.15, 0, 0, 0)

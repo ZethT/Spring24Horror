@@ -1,18 +1,17 @@
-[gd_scene load_steps=24 format=3 uid="uid://cwhnxdadktxvo"]
+[gd_scene load_steps=19 format=3 uid="uid://cogot2i1julp6"]
 
-[ext_resource type="Script" path="res://NPCs/Ghost.gd" id="1_12wvp"]
-[ext_resource type="Texture2D" uid="uid://bqqqcf8cbbor3" path="res://cat_007_cat texture.png" id="2_mwykg"]
-[ext_resource type="Animation" uid="uid://dm7bvuvg3qd0v" path="res://Ghost_Animations/eat.res" id="3_xp4j8"]
-[ext_resource type="Animation" uid="uid://j1fhqrj6vjy4" path="res://Ghost_Animations/idle.res" id="4_t4nhh"]
-[ext_resource type="Animation" uid="uid://m38lah76m8oq" path="res://Ghost_Animations/sit.res" id="5_s6j1g"]
-[ext_resource type="Animation" uid="uid://dcu6qk4m5f3a6" path="res://Ghost_Animations/walk.res" id="6_oootj"]
+[ext_resource type="Texture2D" uid="uid://bqqqcf8cbbor3" path="res://cat_007_cat texture.png" id="1_djp4h"]
+[ext_resource type="Animation" uid="uid://dm7bvuvg3qd0v" path="res://Ghost_Animations/eat.res" id="2_8cfge"]
+[ext_resource type="Animation" uid="uid://j1fhqrj6vjy4" path="res://Ghost_Animations/idle.res" id="3_5ofpe"]
+[ext_resource type="Animation" uid="uid://m38lah76m8oq" path="res://Ghost_Animations/sit.res" id="4_pawvs"]
+[ext_resource type="Animation" uid="uid://dcu6qk4m5f3a6" path="res://Ghost_Animations/walk.res" id="5_rw7jk"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gg23e"]
 resource_name = "Material.001"
 cull_mode = 2
-albedo_texture = ExtResource("2_mwykg")
+albedo_texture = ExtResource("1_djp4h")
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_2vir6"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_m48ir"]
 resource_name = "cat_007_Sphere_001"
 _surfaces = [{
 "aabb": AABB(-1.06273, -1.34989, -3.3042, 2.12546, 2.57945, 6.75532),
@@ -32,7 +31,7 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 
-[sub_resource type="Skin" id="Skin_a2sd6"]
+[sub_resource type="Skin" id="Skin_0ux37"]
 resource_name = "Skin"
 bind_count = 13
 bind/0/name = &"Bone.004"
@@ -165,36 +164,27 @@ tracks/11/keys = PackedFloat32Array(0, 1, -0.123979, -0.800388, 0.480368, 0.3365
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0kvl4"]
 _data = {
-"eat": ExtResource("3_xp4j8"),
-"idle": ExtResource("4_t4nhh"),
+"eat": ExtResource("2_8cfge"),
+"idle": ExtResource("3_5ofpe"),
 "look up": SubResource("Animation_dvrq8"),
-"sit": ExtResource("5_s6j1g"),
-"walk": ExtResource("6_oootj")
+"sit": ExtResource("4_pawvs"),
+"walk": ExtResource("5_rw7jk")
 }
 
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_k6ean"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_v7uxf"]
+radius = 0.25
+height = 1.0
+
+[sub_resource type="AnimationNodeTransition" id="AnimationNodeTransition_gkqnt"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_8d6ni"]
 animation = &"eat"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qdtbl"]
-animation = &"idle"
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_av8fv"]
 animation = &"idle"
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_p4em1"]
-animation = &"idle"
-
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_6c78c"]
-animation = &"idle"
-
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_eccy2"]
-
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_cldb0"]
 animation = &"look up"
-
-[sub_resource type="AnimationNodeBlend2" id="AnimationNodeBlend2_bp1ql"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_x421u"]
 animation = &"sit"
@@ -202,42 +192,23 @@ animation = &"sit"
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_vq03q"]
 animation = &"walk"
 
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_2wt3e"]
-graph_offset = Vector2(-740.116, -129.225)
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_yho2s"]
+graph_offset = Vector2(-668.699, -63.6073)
+nodes/Transition/node = SubResource("AnimationNodeTransition_gkqnt")
+nodes/Transition/position = Vector2(80, 140)
 nodes/eat/node = SubResource("AnimationNodeAnimation_8d6ni")
-nodes/eat/position = Vector2(400, 60)
-nodes/eat&idle/node = SubResource("AnimationNodeBlend2_k6ean")
-nodes/eat&idle/position = Vector2(520, -60)
-nodes/idle/node = SubResource("AnimationNodeAnimation_6c78c")
-nodes/idle/position = Vector2(560, 220)
-"nodes/idle 2/node" = SubResource("AnimationNodeAnimation_qdtbl")
-"nodes/idle 2/position" = Vector2(60, -60)
-"nodes/idle 3/node" = SubResource("AnimationNodeAnimation_av8fv")
-"nodes/idle 3/position" = Vector2(60, 200)
-"nodes/idle 4/node" = SubResource("AnimationNodeAnimation_p4em1")
-"nodes/idle 4/position" = Vector2(397.138, -50.0833)
+nodes/eat/position = Vector2(-100, 0)
+nodes/idle/node = SubResource("AnimationNodeAnimation_av8fv")
+nodes/idle/position = Vector2(-280, 220)
 "nodes/look up/node" = SubResource("AnimationNodeAnimation_cldb0")
-"nodes/look up/position" = Vector2(60, 60)
-"nodes/look up & idle/node" = SubResource("AnimationNodeBlend2_eccy2")
-"nodes/look up & idle/position" = Vector2(180, -60)
-nodes/output/position = Vector2(740, 160)
+"nodes/look up/position" = Vector2(-460, 100)
 nodes/sit/node = SubResource("AnimationNodeAnimation_x421u")
-nodes/sit/position = Vector2(60, 320)
-nodes/sit&idle/node = SubResource("AnimationNodeBlend2_bp1ql")
-nodes/sit&idle/position = Vector2(180, 200)
+nodes/sit/position = Vector2(-440, 300)
 nodes/walk/node = SubResource("AnimationNodeAnimation_vq03q")
-nodes/walk/position = Vector2(400, 240)
-node_connections = [&"eat&idle", 0, &"idle 4", &"eat&idle", 1, &"eat", &"look up & idle", 0, &"idle 2", &"look up & idle", 1, &"look up", &"output", 0, &"idle", &"sit&idle", 0, &"idle 3", &"sit&idle", 1, &"sit"]
+nodes/walk/position = Vector2(-260, 80)
+node_connections = [&"output", 0, &"Transition"]
 
-[node name="Ghost" type="CharacterBody3D"]
-collision_layer = 4
-script = ExtResource("1_12wvp")
-
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
-debug_enabled = true
-
-[node name="follow" type="Timer" parent="."]
-autostart = true
+[node name="cat_007" type="CharacterBody3D"]
 
 [node name="Armature" type="Node3D" parent="."]
 transform = Transform3D(0.249458, 0, 0, 0, 0.249458, 0, 0, 0, 0.249458, 0, 0, 0.270259)
@@ -247,7 +218,7 @@ bones/0/name = "Bone.004"
 bones/0/parent = -1
 bones/0/rest = Transform3D(0.99545, -0.0952816, 0.000384815, -6.33299e-08, 0.00403798, 0.999992, -0.0952823, -0.995442, 0.00401962, -3.16105e-09, 0.0926059, 0.582237)
 bones/0/enabled = true
-bones/0/position = Vector3(8.91657e-10, 0.0886334, 0.582237)
+bones/0/position = Vector3(-3.16105e-09, 0.0926059, 0.582237)
 bones/0/rotation = Quaternion(-0.704875, 0.0337938, 0.0336576, 0.707727)
 bones/0/scale = Vector3(1, 1, 1)
 bones/1/name = "Bone.002"
@@ -262,7 +233,7 @@ bones/2/parent = 1
 bones/2/rest = Transform3D(1, 1.27598e-08, 5.9528e-07, -1.88362e-08, 0.999948, 0.0102088, -5.95119e-07, -0.0102088, 0.999948, -1.42109e-14, 1.52434, 2.98022e-08)
 bones/2/enabled = true
 bones/2/position = Vector3(-1.42109e-14, 1.52434, 2.98022e-08)
-bones/2/rotation = Quaternion(-0.00504141, -0.0322399, -0.153194, 0.987657)
+bones/2/rotation = Quaternion(-0.00510446, 2.97604e-07, -7.89909e-09, 0.999987)
 bones/2/scale = Vector3(1, 1, 1)
 bones/3/name = "Spine.001"
 bones/3/parent = 0
@@ -276,7 +247,7 @@ bones/4/parent = 3
 bones/4/rest = Transform3D(0.99992, -0.0126652, -9.56219e-05, 0.0126655, 0.999862, 0.0107136, -4.00817e-05, -0.010714, 0.999943, -2.27374e-10, 1.78406, -6.45576e-09)
 bones/4/enabled = true
 bones/4/position = Vector3(-2.27374e-10, 1.78406, -6.45576e-09)
-bones/4/rotation = Quaternion(-0.0091058, -0.000584941, 0.00544617, 0.999944)
+bones/4/rotation = Quaternion(-0.0053571, -1.38855e-05, 0.0063329, 0.999966)
 bones/4/scale = Vector3(1, 1, 1)
 bones/5/name = "arm.R.001"
 bones/5/parent = 3
@@ -336,22 +307,30 @@ bones/12/rotation = Quaternion(0.123979, 0.800388, -0.480368, -0.336534)
 bones/12/scale = Vector3(1, 1, 1)
 
 [node name="Sphere_001" type="MeshInstance3D" parent="Armature/Skeleton3D"]
-mesh = SubResource("ArrayMesh_2vir6")
-skin = SubResource("Skin_a2sd6")
+mesh = SubResource("ArrayMesh_m48ir")
+skin = SubResource("Skin_0ux37")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_0kvl4")
 }
 
+[node name="MeshInstance3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_v7uxf")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+debug_enabled = true
+
+[node name="follow" type="Timer" parent="."]
+autostart = true
+
 [node name="AnimationTree" type="AnimationTree" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_0kvl4")
 }
-tree_root = SubResource("AnimationNodeBlendTree_2wt3e")
+tree_root = SubResource("AnimationNodeBlendTree_yho2s")
 anim_player = NodePath("../AnimationPlayer")
-parameters/eat&idle/blend_amount = 0.72
-"parameters/look up & idle/blend_amount" = 0.73
-parameters/sit&idle/blend_amount = 0.73
-
-[connection signal="timeout" from="follow" to="." method="_on_follow_timeout"]
+parameters/Transition/current_state = ""
+parameters/Transition/transition_request = ""
+parameters/Transition/current_index = -1
