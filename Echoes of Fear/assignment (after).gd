@@ -1,15 +1,12 @@
 extends Node3D
 
-var isReplaced = false
+var assignmentbefore : Node3D
 
 func _ready():
-	pass
+	# Assuming object_A is assigned in the Inspector or obtained via code
+	self.visible = false
 
-func _process(delta):
-	pass
-
-func _on_assignment_before_finish_homework():
-	if not isReplaced:
-		isReplaced = true
-		print("Assignment (before) has been replaced with Assignment (after).")
-		# ここにAssignment (after) に関連する任意の追加のコードを追加できます
+func _process(_delta):
+	if Input.is_action_just_pressed("finishhomework"):
+		# Toggle visibility of object B and object A
+		self.visible = true
