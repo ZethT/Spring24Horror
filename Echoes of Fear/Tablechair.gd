@@ -7,6 +7,9 @@ var originalPosition: Vector3
 
 const TIME = 100
 
+# Track player's current state
+var isSitting = false
+
 func _ready():
 	# Assuming you've set up the sitting position
 	sittingPosition = position - Vector3(-0.3, 0.5, 0.7) # Adjust the position as needed
@@ -20,12 +23,24 @@ func interact(held_item):
 	# Called when the player interacts with this object
 	if !held_item:
 		# Move the player to the sitting position
-		if player:
-			player.transform.origin = sittingPosition
-			player.velocity = Vector3.ZERO  # Stop player movement
-			player.speed = 0
-			player.gravity = 0  # Disable gravity temporarily
-			#player.mouse_mode = Input.MOUSE_MODE_VISIBLE  # Show cursor
+		if isSitting:
+			# Stand up
+			if player:
+				player.transform.origin = originalPosition
+				player.gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
+				player.speed = 5
+				#player.mouse_mode = Input.MOUSE_MODE_CAPTURED  # Capture mouse again
+				isSitting = false
+		else:
+			# Sit down
+			if player:
+				originalPosition = player.transform.origin
+				player.transform.origin = sittingPosition
+				player.velocity = Vector3.ZERO  # Stop player movement
+				player.speed = 0
+				player.gravity = 0  # Disable gravity temporarily
+				#player.mouse_mode = Input.MOUSE_MODE_VISIBLE  # Show cursor
+				isSitting = true
 	else:
 		# Stand up (optional: play a stand-up animation)
 		if player:
