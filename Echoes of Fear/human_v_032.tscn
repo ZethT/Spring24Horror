@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://ne2ecbin1bn2"]
+
+[ext_resource type="PackedScene" uid="uid://c5qtl5f85vmet" path="res://Environments/human v032.glb" id="1_m6u8u"]
+
+[node name="human v032" instance=ExtResource("1_m6u8u")]
+
+[node name="stalker" parent="." index="0"]
+visible = false
+
+[node name="retopo" parent="." index="5"]
+visible = false
