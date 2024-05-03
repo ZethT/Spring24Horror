@@ -37,14 +37,14 @@ agent_max_climb = 0.05
 [sub_resource type="BoxShape3D" id="BoxShape3D_7s3ny"]
 size = Vector3(100, 0.5, 100)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hcx38"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a1rv3"]
 albedo_color = Color(0.25098, 0.376471, 0.2, 1)
 albedo_texture = ExtResource("2_6w7eu")
 metallic_specular = 0.0
 uv1_scale = Vector3(60, 60, 60)
 
 [sub_resource type="BoxMesh" id="BoxMesh_mhl1a"]
-material = SubResource("StandardMaterial3D_hcx38")
+material = SubResource("StandardMaterial3D_a1rv3")
 size = Vector3(100, 0.5, 100)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_prj0a"]
@@ -2674,7 +2674,7 @@ omni_range = 500.0
 omni_attenuation = 0.267943
 
 [node name="Ghost" parent="." instance=ExtResource("4_eqi3g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.34978, 1.14433, 0.33939)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.44259, 0.765942, 0.170546)
 
 [node name="window!5" parent="." instance=ExtResource("5_bqc0m")]
 transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -13.435, 1.4408, 1.198)

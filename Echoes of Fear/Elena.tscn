@@ -4,7 +4,7 @@
 [ext_resource type="Environment" uid="uid://bp88or08673r3" path="res://Environments/home_environment_morning.tres" id="2_ayfxb"]
 [ext_resource type="Texture2D" uid="uid://cfppxev5irwoa" path="res://paper.png" id="3_ip1dq"]
 [ext_resource type="Texture2D" uid="uid://v2lii8vb7jly" path="res://ring_texture.png" id="3_u7fai"]
-[ext_resource type="FontFile" path="res://tomhand.ttf" id="4_1kxm8"]
+[ext_resource type="FontFile" uid="uid://8sk6wyjfa33n" path="res://tomhand.ttf" id="4_1kxm8"]
 [ext_resource type="Shader" path="res://crt.gdshader" id="4_8nayb"]
 [ext_resource type="AudioStream" uid="uid://c1fx0n4iaqqyc" path="res://audio/ElenaWalking.mp3" id="7_nai62"]
 
