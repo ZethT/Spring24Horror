@@ -55,5 +55,5 @@ void fragment(  )
     float comp = smoothstep( 0.1, 0.9, sin(TIME) );
  
 
-    COLOR = vec4(col,0.5);
+    COLOR = vec4(col,0.2);
 }
