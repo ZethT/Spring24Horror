@@ -1,4 +1,4 @@
-[gd_scene load_steps=191 format=3 uid="uid://b5y7ve8rcuiin"]
+[gd_scene load_steps=195 format=3 uid="uid://b5y7ve8rcuiin"]
 
 [ext_resource type="Script" path="res://Environments/Home.gd" id="1_is6ft"]
 [ext_resource type="Texture2D" uid="uid://doh7um0qaqlgo" path="res://grass.png" id="2_6w7eu"]
@@ -9,6 +9,8 @@
 [ext_resource type="PackedScene" uid="uid://cv76tqji7p34c" path="res://NPCs/uploads_files_2406339_DishRack.gltf" id="6_d6mtq"]
 [ext_resource type="PackedScene" uid="uid://b5m2a17ebscmv" path="res://NPCs/3d-model.dae" id="7_v3oxq"]
 [ext_resource type="PackedScene" uid="uid://dr5x3vb2j4j60" path="res://NPCs/toliet.glb" id="8_2fkds"]
+[ext_resource type="Script" path="res://Environments/clothstatic.gd" id="8_bg1l3"]
+[ext_resource type="Script" path="res://Environments/clothstaticbody.gd" id="8_sr5db"]
 [ext_resource type="PackedScene" uid="uid://ba0brm2xv7mh3" path="res://NPCs/uploads_files_4591109_format4_dae.dae" id="9_oan4c"]
 [ext_resource type="PackedScene" uid="uid://h7eksix7nb56" path="res://NPCs/uploads_files_2406301_Bathtub.gltf" id="10_kr0pg"]
 [ext_resource type="PackedScene" uid="uid://ne2ecbin1bn2" path="res://human_v_032.tscn" id="12_30asv"]
@@ -1087,6 +1089,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ovpdn")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_p4og0"]
+size = Vector3(0.606201, 0.815033, 1)
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_u5gg4"]
 _surfaces = [{
 "aabb": AABB(-0.278137, -0.00138139, -0.393862, 0.595166, 0.0870228, 0.805484),
@@ -1120,6 +1125,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_u5gg4")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fhs7w"]
+size = Vector3(0.567108, 1, 0.773438)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_pebaa"]
 _surfaces = [{
@@ -2944,15 +2952,33 @@ transform = Transform3D(-1.53898, 0, -1.50241e-07, 0, 1.5259, 0, 1.34542e-07, 0,
 mesh = SubResource("ArrayMesh_f8rfp")
 skeleton = NodePath("")
 
-[node name="clothes_001" type="MeshInstance3D" parent="assets"]
+[node name="StaticBody3D" type="StaticBody3D" parent="assets"]
 transform = Transform3D(-0.171438, 0.984808, 0.0276195, 0.159054, -4.47035e-08, 0.98727, 0.972271, 0.173648, -0.156638, 8.04463, 0.117063, -22.3481)
+script = ExtResource("8_sr5db")
+
+[node name="clothes_001" type="MeshInstance3D" parent="assets/StaticBody3D"]
+transform = Transform3D(1, -4.6407e-09, 1.50293e-08, -7.92587e-09, 1, 1.39002e-10, 8.61147e-09, 1.3288e-09, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_h8xkk")
 skeleton = NodePath("")
+script = ExtResource("8_bg1l3")
 
-[node name="clothes_002" type="MeshInstance3D" parent="assets"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="assets/StaticBody3D"]
+transform = Transform3D(1, -6.05285e-07, -1.1451e-07, -3.77282e-08, 0.999998, 7.08611e-09, 9.80184e-08, -2.0205e-08, 0.999997, 0.0185165, -0.475653, 0.298661)
+shape = SubResource("BoxShape3D_p4og0")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="assets"]
 transform = Transform3D(0.665595, 0, -0.746313, 0, 1, 0, 0.746313, 0, 0.665595, 9.88004, 0.0264167, -21.5557)
+script = ExtResource("8_sr5db")
+
+[node name="clothes_002" type="MeshInstance3D" parent="assets/StaticBody3D2"]
+transform = Transform3D(1, 0, -7.65425e-09, 0, 1, 0, 6.77925e-09, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_vdl4w")
 skeleton = NodePath("")
+script = ExtResource("8_bg1l3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="assets/StaticBody3D2"]
+transform = Transform3D(0.782847, 0, 0.622214, 0, 1, 0, -0.622214, 0, 0.782847, -0.0398571, 0.184653, 0.000583649)
+shape = SubResource("BoxShape3D_fhs7w")
 
 [node name="coffee_table_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.52099, 0.0442557, -13.4835)
