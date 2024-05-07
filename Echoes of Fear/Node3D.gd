@@ -4,6 +4,7 @@ extends RigidBody3D
 var originalPosition: Vector3
 var isMoving: bool = false
 var moveSpeed: float = 5.0
+@onready var Select = $"../Select"
 
 func _ready():
 	# Store the original position of the window
@@ -15,6 +16,7 @@ func _input(event: InputEvent):
 		if keyEvent.scancode == KEY_O and keyEvent.pressed:
 			# Player pressed the "O" key
 			# Player clicked the window
+			Select.play()
 			isMoving = true
 			# Disable gravity temporarily (optional)
 			gravity_scale = 0.0

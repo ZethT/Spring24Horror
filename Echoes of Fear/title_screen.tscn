@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://btixvv3tyltit"]
+[gd_scene load_steps=3 format=3 uid="uid://btixvv3tyltit"]
 
 [ext_resource type="Script" path="res://title_screen.gd" id="1_e036r"]
+[ext_resource type="AudioStream" uid="uid://cs5umeu03idyq" path="res://audio/Select.mp3" id="2_y7rdc"]
 
 [node name="Title Screen" type="Control"]
 layout_mode = 3
@@ -37,6 +38,9 @@ text = "Options"
 [node name="Exit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Exit"
+
+[node name="Select" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_y7rdc")
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_options_pressed"]
