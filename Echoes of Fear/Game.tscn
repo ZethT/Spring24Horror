@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://ddskb0p1k5uxi"]
+[gd_scene load_steps=9 format=3 uid="uid://ddskb0p1k5uxi"]
 
 [ext_resource type="PackedScene" uid="uid://t6spb3v41lh" path="res://Elena.tscn" id="1_ctpqe"]
 [ext_resource type="Script" path="res://Game.gd" id="1_mug4m"]
 [ext_resource type="PackedScene" uid="uid://b5y7ve8rcuiin" path="res://Environments/Home.tscn" id="2_gi724"]
 [ext_resource type="PackedScene" uid="uid://ccu351y3rnhy" path="res://Environments/School.tscn" id="3_8i1aq"]
+[ext_resource type="AudioStream" uid="uid://c1fx0n4iaqqyc" path="res://audio/ElenaWalking.mp3" id="5_tdusn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_myxdm"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -32,3 +33,6 @@ shadow_enabled = true
 
 [node name="Elena" parent="." instance=ExtResource("1_ctpqe")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.12068, 0)
+
+[node name="Elenawalking" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("5_tdusn")
