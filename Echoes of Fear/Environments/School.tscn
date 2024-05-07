@@ -13,6 +13,7 @@ size = Vector3(20, 0.5, 20)
 [node name="School" type="Node3D"]
 
 [node name="Terrain" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.184027, -0.00468683, -0.0976166)
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Terrain"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 0)
