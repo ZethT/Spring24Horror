@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dkvq25g4bnrd5"
+path="res://.godot/imported/uploads_files_3173502_Anime+school+building.obj-8aac77301bbd4e6851dadddf02f01bfb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/uploads_files_3173502_Anime+school+building.obj-8aac77301bbd4e6851dadddf02f01bfb.mesh"]
+
+source_file="res://NPCs/uploads_files_3173502_Anime+school+building.obj"
+dest_files=["res://.godot/imported/uploads_files_3173502_Anime+school+building.obj-8aac77301bbd4e6851dadddf02f01bfb.mesh", "res://.godot/imported/uploads_files_3173502_Anime+school+building.obj-8aac77301bbd4e6851dadddf02f01bfb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

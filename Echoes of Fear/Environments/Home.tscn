@@ -1,4 +1,4 @@
-[gd_scene load_steps=195 format=3 uid="uid://b5y7ve8rcuiin"]
+[gd_scene load_steps=194 format=3 uid="uid://b5y7ve8rcuiin"]
 
 [ext_resource type="Script" path="res://Environments/Home.gd" id="1_is6ft"]
 [ext_resource type="Texture2D" uid="uid://doh7um0qaqlgo" path="res://grass.png" id="2_6w7eu"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://cwhnxdadktxvo" path="res://NPCs/Ghost.tscn" id="4_eqi3g"]
 [ext_resource type="PackedScene" uid="uid://dmexes2g1y65y" path="res://window!.tscn" id="5_bqc0m"]
 [ext_resource type="PackedScene" uid="uid://cv76tqji7p34c" path="res://NPCs/uploads_files_2406339_DishRack.gltf" id="6_d6mtq"]
-[ext_resource type="PackedScene" uid="uid://b5m2a17ebscmv" path="res://NPCs/3d-model.dae" id="7_v3oxq"]
 [ext_resource type="PackedScene" uid="uid://dr5x3vb2j4j60" path="res://NPCs/toliet.glb" id="8_2fkds"]
 [ext_resource type="Script" path="res://Environments/clothstatic.gd" id="8_bg1l3"]
 [ext_resource type="Script" path="res://Environments/clothstaticbody.gd" id="8_sr5db"]
@@ -104,7 +103,7 @@ resource_name = "dbl_D80 wenge-gray_008"
 cull_mode = 2
 roughness = 0.00196078
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_d44ot"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_xjq7j"]
 _surfaces = [{
 "aabb": AABB(-0.0650004, -0.301, 0.2295, 0.130001, 0.024, 0.124),
 "format": 34896613377,
@@ -290,7 +289,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 254, 127, 194, 5, 255, 255, 0, 0, 254, 127, 0, 0, 255, 255, 0, 0, 254, 127, 194, 5, 0, 0, 0, 0, 254, 127, 60, 250, 255, 255, 0, 0, 254, 127, 60, 250, 0, 0, 0, 0, 254, 127, 255, 255, 255, 255, 0, 0, 254, 127, 255, 255, 0, 0, 0, 0, 254, 127, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_d44ot")
+shadow_mesh = SubResource("ArrayMesh_xjq7j")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pxa3s"]
 size = Vector3(0.804077, 1.34326, 0.529022)
@@ -3147,9 +3146,6 @@ skeleton = NodePath("")
 
 [node name="uploads_files_2406339_DishRack" parent="." instance=ExtResource("6_d6mtq")]
 transform = Transform3D(-6.47542e-08, 0, 1.10275, 0, 1, 0, -1.4814, 0, -4.82029e-08, -13.06, 1.43998, 3.10401)
-
-[node name="3d-model" parent="." instance=ExtResource("7_v3oxq")]
-transform = Transform3D(-2.12073, 0, -1.50656e-07, 0, 1.53349, 0, 1.854e-07, 0, -1.72331, -7.17288, 1.04644, -6.9404)
 
 [node name="toliet" parent="." instance=ExtResource("8_2fkds")]
 transform = Transform3D(0.346249, 0, 0, 0, 0.265371, 0, 0, 0, 0.284735, -8.90539, 0.0263162, -7.17103)
