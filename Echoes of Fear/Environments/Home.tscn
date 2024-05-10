@@ -1,4 +1,8 @@
-[gd_scene load_steps=187 format=3 uid="uid://b5y7ve8rcuiin"]
+<<<<<<< HEAD
+[gd_scene load_steps=194 format=3 uid="uid://b5y7ve8rcuiin"]
+=======
+[gd_scene load_steps=196 format=3 uid="uid://b5y7ve8rcuiin"]
+>>>>>>> 3d04a32169cf4acf7734bf4b8e5644982e54df13
 
 [ext_resource type="Script" path="res://Environments/Home.gd" id="1_is6ft"]
 [ext_resource type="Texture2D" uid="uid://doh7um0qaqlgo" path="res://grass.png" id="2_6w7eu"]
@@ -7,8 +11,9 @@
 [ext_resource type="PackedScene" uid="uid://cwhnxdadktxvo" path="res://NPCs/Ghost.tscn" id="4_eqi3g"]
 [ext_resource type="PackedScene" uid="uid://dmexes2g1y65y" path="res://window!.tscn" id="5_bqc0m"]
 [ext_resource type="PackedScene" uid="uid://cv76tqji7p34c" path="res://NPCs/uploads_files_2406339_DishRack.gltf" id="6_d6mtq"]
-[ext_resource type="PackedScene" uid="uid://b5m2a17ebscmv" path="res://NPCs/3d-model.dae" id="7_v3oxq"]
 [ext_resource type="PackedScene" uid="uid://dr5x3vb2j4j60" path="res://NPCs/toliet.glb" id="8_2fkds"]
+[ext_resource type="Script" path="res://Environments/clothstatic.gd" id="8_bg1l3"]
+[ext_resource type="Script" path="res://Environments/clothstaticbody.gd" id="8_sr5db"]
 [ext_resource type="PackedScene" uid="uid://ba0brm2xv7mh3" path="res://NPCs/uploads_files_4591109_format4_dae.dae" id="9_oan4c"]
 [ext_resource type="PackedScene" uid="uid://h7eksix7nb56" path="res://NPCs/uploads_files_2406301_Bathtub.gltf" id="10_kr0pg"]
 [ext_resource type="PackedScene" uid="uid://ne2ecbin1bn2" path="res://human_v_032.tscn" id="12_30asv"]
@@ -24,6 +29,11 @@
 [ext_resource type="Texture2D" uid="uid://ceupaue62ex5l" path="res://plants_branch-01.png" id="23_qfl5n"]
 [ext_resource type="PackedScene" uid="uid://dql2l1bdu38ms" path="res://cat_food.tscn" id="24_kq2p1"]
 [ext_resource type="Texture2D" uid="uid://ceoai5lggktrr" path="res://plants_branch-02.png" id="24_y1e3q"]
+[ext_resource type="PackedScene" uid="uid://cfm23m4okinau" path="res://assignment (before).glb" id="25_y1y0c"]
+[ext_resource type="Script" path="res://assignment (before).gd" id="26_afuhf"]
+[ext_resource type="PackedScene" uid="uid://bji08joejvey3" path="res://assignment (after).glb" id="26_taui3"]
+[ext_resource type="Script" path="res://assignment (after).gd" id="28_dbsew"]
+[ext_resource type="AudioStream" uid="uid://vfmdwqtpr2c4" path="res://audio/takeClothes.mp3" id="31_qd5cd"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_63e3b"]
 vertices = PackedVector3Array(-14.44, 0.1, -28.72, -12.48, 0.1, -29, -12.76, 0.1, -49.44, -49.44, 0.1, -49.44, -49.44, 0.1, -27.32, -49.44, 0.1, -27.32, -14.44, 0.1, -27.04, -14.44, 0.1, -28.72, -12.48, 0.1, -29, -5.76, 0.1, -29, -5.48, 0.1, -49.44, -12.76, 0.1, -49.44, -3.8, 0.1, -28.72, -3.8, 0.1, -25.08, 3.76, 0.1, -25.08, -5.48, 0.1, -49.44, -5.76, 0.1, -29, -3.8, 0.1, -28.72, -3.8, 0.1, -28.72, 3.76, 0.1, -25.08, 4.04, 0.1, -49.44, -5.48, 0.1, -49.44, 4.04, 0.1, -49.44, 3.76, 0.1, -25.08, 5.72, 0.1, -24.8, 49.4, 0.1, -22.56, 49.4, 0.1, -49.44, 5.72, 0.1, -24.8, 5.72, 0.1, -22.56, 49.4, 0.1, -22.56, -4.64, 6.2, -23.96, -4.92, 6.2, -27.88, -13.32, 6.2, -27.88, -13.04, 6.2, 4.6, 4.6, 6.2, 4.6, 4.6, 6.2, -23.96, -4.64, 6.2, -23.96, -13.04, 6.2, 4.6, -13.04, 0.1, -22, -12.48, 0.1, -22, -12.2, 0.1, -25.08, -13.04, 0.1, -27.6, -12.2, 0.1, -25.08, -5.2, 0.1, -25.08, -5.2, 0.1, -27.6, -13.04, 0.1, -27.6, -49.44, 0.1, 3.2, -14.16, 0.1, 3.2, -14.44, 0.1, -27.04, -49.44, 0.1, -27.32, -11.08, 0.1, -23.68, -11.08, 0.1, -22, -5.2, 0.1, -22, -5.2, 0.1, -23.68, -3.8, 0.1, -23.68, -3.8, 0.1, -22, 4.32, 0.1, -22, 4.32, 0.1, -23.68, 4.88, 0.1, 0.68, 4.88, 0.1, 1.24, 5.72, 0.1, 1.52, 5.72, 0.1, 0.400002, 5.72, 0.1, -22.56, 5.72, 0.1, 0.400002, 15.24, 0.1, 5.72, 49.4, 0.1, 6.56, 49.4, 0.1, -22.56, 5.72, 0.1, 1.52, 5.72, 0.1, 5.16, 14.12, 0.1, 5.72, 5.72, 0.1, 0.400002, 5.72, 0.1, 1.52, 14.12, 0.1, 5.72, 15.24, 0.1, 5.72, 15.24, 0.1, 5.72, 15.52, 0.1, 6.56, 49.4, 0.1, 6.56, -11.08, 0.1, -19.48, -11.08, 0.1, -15.56, -5.2, 0.1, -15.56, -5.2, 0.1, -19.48, -2.12, 0.1, -13.04, -1.84, 0.1, -11.36, 3.76, 0.1, -11.36, -3.8, 0.1, -19.48, -3.8, 0.1, -13.04, -2.12, 0.1, -13.04, -2.12, 0.1, -13.04, 3.76, 0.1, -11.36, 3.76, 0.1, -19.48, -3.8, 0.1, -19.48, -11.08, 0.1, -14.16, -11.08, 0.1, -11.36, -5.48, 0.1, -11.36, -5.48, 0.1, -14.16, -3.24, 0.1, -10.24, -3.24, 0.1, -11.64, -4.08, 0.1, -9.4, -2.4, 0.1, -8.84, -3.24, 0.1, -10.24, -4.08, 0.1, -9.4, -3.8, 0.1, -8.84, -3.8, 0.1, -7.44, -2.68, 0.1, -7.16, -2.4, 0.1, -8.56, -2.4, 0.1, -8.84, -1, 0.1, -8.28, -1, 0.1, -2.68, 0.959999, 0.1, -8, 0.68, 0.1, -9.96, -1, 0.1, -9.96, -1.28, 0.1, -8.84, 0.959999, 0.1, -8, -5.2, 0.1, -9.12, -5.2, 0.1, -9.4, -5.48, 0.1, -9.96, -12.48, 0.1, -10.24, -12.48, 0.1, -7.16, -5.48, 0.1, -7.16, -3.8, 0.1, -8.84, -2.4, 0.1, -8.84, -4.08, 0.1, -9.4, -5.2, 0.1, -9.4, -5.2, 0.1, -9.12, -1, 0.1, -8.28, 0.959999, 0.1, -8, -1.28, 0.1, -8.84, -2.4, 0.1, -8.84, -2.4, 0.1, -8.56, 3.76, 0.1, -2.68, 3.76, 0.1, -8, 0.959999, 0.1, -8, -1, 0.1, -2.68, 4.88, 0.1, 1.24, 4.88, 0.1, 0.68, 3.76, 0.1, 0.400002, 3.76, 0.1, 1.52, 3.76, 0.1, 4.04, 3.76, 0.1, 1.52, -2.68, 0.1, -1.56, -12.48, 0.1, -5.48, -12.48, 0.1, 4.04, -2.68, 0.1, -7.16, -3.8, 0.1, -7.44, -4.08, 0.1, -5.48, -2.68, 0.1, -1.56, -2.68, 0.1, -1.56, -4.08, 0.1, -5.48, -12.48, 0.1, -5.48, 3.76, 0.1, 0.400002, 3.76, 0.1, -1.28, -2.68, 0.1, -1.56, 3.76, 0.1, 1.52, 3.76, 0.1, 0.400002, -2.68, 0.1, -1.56, -14.16, 0.1, 5.44, -14.16, 0.1, 3.2, -49.44, 0.1, 3.2, -11.64, 0.1, 5.72, -14.16, 0.1, 5.44, -49.44, 0.1, 3.2, -49.44, 0.1, 49.4, -11.64, 0.1, 49.4, 13.84, 0.1, 6.84, 14.12, 0.1, 5.72, 5.72, 0.1, 5.16, 5.44, 0.1, 5.72, 14.68, 0.1, 7.12, 13.84, 0.1, 6.84, 5.44, 0.1, 5.72, 3.2, 0.1, 5.72, 3.2, 0.1, 49.4, 14.68, 0.1, 49.4, -11.64, 0.1, 49.4, 3.2, 0.1, 49.4, 3.2, 0.1, 5.72, -11.64, 0.1, 5.72, 49.4, 0.1, 6.56, 15.52, 0.1, 6.56, 14.68, 0.1, 7.12, 14.68, 0.1, 49.4, 49.4, 0.1, 49.4)
@@ -98,7 +108,7 @@ resource_name = "dbl_D80 wenge-gray_008"
 cull_mode = 2
 roughness = 0.00196078
 
-[sub_resource type="ArrayMesh" id="ArrayMesh_d44ot"]
+[sub_resource type="ArrayMesh" id="ArrayMesh_xjq7j"]
 _surfaces = [{
 "aabb": AABB(-0.0650004, -0.301, 0.2295, 0.130001, 0.024, 0.124),
 "format": 34896613377,
@@ -284,7 +294,7 @@ _surfaces = [{
 "vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 254, 127, 194, 5, 255, 255, 0, 0, 254, 127, 0, 0, 255, 255, 0, 0, 254, 127, 194, 5, 0, 0, 0, 0, 254, 127, 60, 250, 255, 255, 0, 0, 254, 127, 60, 250, 0, 0, 0, 0, 254, 127, 255, 255, 255, 255, 0, 0, 254, 127, 255, 255, 0, 0, 0, 0, 254, 127, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
 }]
 blend_shape_mode = 0
-shadow_mesh = SubResource("ArrayMesh_d44ot")
+shadow_mesh = SubResource("ArrayMesh_xjq7j")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_pxa3s"]
 size = Vector3(0.804077, 1.34326, 0.529022)
@@ -1083,6 +1093,9 @@ _surfaces = [{
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_ovpdn")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_p4og0"]
+size = Vector3(0.606201, 0.815033, 1)
+
 [sub_resource type="ArrayMesh" id="ArrayMesh_u5gg4"]
 _surfaces = [{
 "aabb": AABB(-0.278137, -0.00138139, -0.393862, 0.595166, 0.0870228, 0.805484),
@@ -1116,6 +1129,9 @@ _surfaces = [{
 }]
 blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_u5gg4")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fhs7w"]
+size = Vector3(0.567108, 1, 0.773438)
 
 [sub_resource type="ArrayMesh" id="ArrayMesh_pebaa"]
 _surfaces = [{
@@ -2205,22 +2221,20 @@ shadow_mesh = SubResource("ArrayMesh_tn00w")
 
 [sub_resource type="GDScript" id="GDScript_x7lph"]
 resource_name = "cat_food"
-script/source = "extends RigidBody3D
+script/source = "extends Node3D
 
 func grab(object):
 	reparent(object)
 	position = Vector3.ZERO
 	rotation = Vector3.ZERO
-	freeze = true
 
 func release(object):
 	reparent(object.get_parent())
-	freeze = false
 "
 
 [sub_resource type="GDScript" id="GDScript_rtckp"]
 resource_name = "catbowl"
-script/source = "extends StaticBody3D
+script/source = "extends Node3D
 
 const TIME = 2
 
@@ -2942,15 +2956,33 @@ transform = Transform3D(-1.53898, 0, -1.50241e-07, 0, 1.5259, 0, 1.34542e-07, 0,
 mesh = SubResource("ArrayMesh_f8rfp")
 skeleton = NodePath("")
 
-[node name="clothes_001" type="MeshInstance3D" parent="assets"]
+[node name="StaticBody3D" type="StaticBody3D" parent="assets"]
 transform = Transform3D(-0.171438, 0.984808, 0.0276195, 0.159054, -4.47035e-08, 0.98727, 0.972271, 0.173648, -0.156638, 8.04463, 0.117063, -22.3481)
+script = ExtResource("8_sr5db")
+
+[node name="clothes_001" type="MeshInstance3D" parent="assets/StaticBody3D"]
+transform = Transform3D(1, -4.6407e-09, 1.50293e-08, -7.92587e-09, 1, 1.39002e-10, 8.61147e-09, 1.3288e-09, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_h8xkk")
 skeleton = NodePath("")
+script = ExtResource("8_bg1l3")
 
-[node name="clothes_002" type="MeshInstance3D" parent="assets"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="assets/StaticBody3D"]
+transform = Transform3D(1, -6.05285e-07, -1.1451e-07, -3.77282e-08, 0.999998, 7.08611e-09, 9.80184e-08, -2.0205e-08, 0.999997, 0.0185165, -0.475653, 0.298661)
+shape = SubResource("BoxShape3D_p4og0")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="assets"]
 transform = Transform3D(0.665595, 0, -0.746313, 0, 1, 0, 0.746313, 0, 0.665595, 9.88004, 0.0264167, -21.5557)
+script = ExtResource("8_sr5db")
+
+[node name="clothes_002" type="MeshInstance3D" parent="assets/StaticBody3D2"]
+transform = Transform3D(1, 0, -7.65425e-09, 0, 1, 0, 6.77925e-09, 0, 1, 0, 0, 0)
 mesh = SubResource("ArrayMesh_vdl4w")
 skeleton = NodePath("")
+script = ExtResource("8_bg1l3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="assets/StaticBody3D2"]
+transform = Transform3D(0.782847, 0, 0.622214, 0, 1, 0, -0.622214, 0, 0.782847, -0.0398571, 0.184653, 0.000583649)
+shape = SubResource("BoxShape3D_fhs7w")
 
 [node name="coffee_table_001" type="MeshInstance3D" parent="assets"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.52099, 0.0442557, -13.4835)
@@ -3119,9 +3151,6 @@ skeleton = NodePath("")
 
 [node name="uploads_files_2406339_DishRack" parent="." instance=ExtResource("6_d6mtq")]
 transform = Transform3D(-6.47542e-08, 0, 1.10275, 0, 1, 0, -1.4814, 0, -4.82029e-08, -13.06, 1.43998, 3.10401)
-
-[node name="3d-model" parent="." instance=ExtResource("7_v3oxq")]
-transform = Transform3D(-2.12073, 0, -1.50656e-07, 0, 1.53349, 0, 1.854e-07, 0, -1.72331, -7.17288, 1.04644, -6.9404)
 
 [node name="toliet" parent="." instance=ExtResource("8_2fkds")]
 transform = Transform3D(0.346249, 0, 0, 0, 0.265371, 0, 0, 0, 0.284735, -8.90539, 0.0263162, -7.17103)
@@ -3425,5 +3454,24 @@ skeleton = NodePath("")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.6234, -3.8147e-06, 45.5252)
 mesh = SubResource("ArrayMesh_8n5up")
 skeleton = NodePath("")
+
+[node name="assignmentbefore" parent="." instance=ExtResource("25_y1y0c")]
+transform = Transform3D(-1.31134e-08, 1.04636e-16, 0.3, 1.04636e-16, 0.3, -1.04636e-16, -0.3, 1.04636e-16, -1.31134e-08, 1.903, 1.125, -9.372)
+visibility_parent = NodePath("../assignmentafter/MeshInstance3D")
+script = ExtResource("26_afuhf")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="assignmentbefore"]
+visibility_parent = NodePath("../../assignmentafter/MeshInstance3D")
+
+[node name="assignmentafter" parent="." instance=ExtResource("26_taui3")]
+transform = Transform3D(-1.31134e-08, 1.04636e-16, 0.3, 1.04636e-16, 0.3, -1.04636e-16, -0.3, 1.04636e-16, -1.31134e-08, 1.903, 1.125, -9.372)
+visibility_parent = NodePath("../assignmentbefore/MeshInstance3D")
+script = ExtResource("28_dbsew")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="assignmentafter"]
+visibility_parent = NodePath("../../assignmentbefore/MeshInstance3D")
+
+[node name="TakeClothes" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("31_qd5cd")
 
 [connection signal="body_entered" from="Terrain/Bus Stop/Area3D" to="." method="_on_area_3d_body_entered"]
