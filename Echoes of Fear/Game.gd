@@ -7,7 +7,7 @@ var current_scene
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	#current_scene = home.instantiate()
+	current_scene = home.instantiate()
 	add_child(current_scene)
 
 
